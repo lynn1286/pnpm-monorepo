@@ -5,13 +5,16 @@
  *      相关资料 https://www.typescriptlang.org/docs/handbook/esm-node.html
  */
 import { cliHelp } from './cli-help.js'
+import { createFigmaConfig } from './create-figma-config.js'
 import { prechecks } from './prechecks.js'
 import { handleError } from './utils.js'
 
 const main = async () => {
   await prechecks()
 
-  await cliHelp()
+  const file = await cliHelp()
+  const figmaConfig = createFigmaConfig(file)
+  console.log('mademine  : main -> figmaConfig', figmaConfig)
 
   return ''
 }

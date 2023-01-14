@@ -29,4 +29,6 @@ export const cliHelp = async () => {
   if (!cli.flags.file) {
     cli.showHelp(1)
   }
+
+  return cli.flags.file
 }
