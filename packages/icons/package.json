@@ -14,7 +14,6 @@
   "author": "lynn1286",
   "license": "ISC",
   "dependencies": {
-    "@mademine/generate-icon": "workspace:^1.0.0",
-    "tsdx": "^0.14.1"
+    "@mademine/generate-icon": "workspace:^1.0.0"
   }
 }

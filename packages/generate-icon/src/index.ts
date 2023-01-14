@@ -1,8 +1,8 @@
-import preChecks from './prechecks'
-import { handleError } from './utils'
+import { prechecks } from './prechecks.js'
+import { handleError } from './utils.js'
 
 const main = async () => {
-  await preChecks()
+  await prechecks()
 
   return ''
 }

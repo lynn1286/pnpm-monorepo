@@ -1,20 +1,18 @@
 import isOnline from 'is-online'
-import { CodedError, ERRORS } from '../types'
-import execa from 'execa'
-import { handleError } from '../utils'
+import { CodedError, ERRORS } from './types.js'
+import { execa } from 'execa'
+import { handleError } from './utils.js'
 import chalk from 'chalk'
 
 /**
  * @description: 预检环境
  * @return {*}
  */
-async function preChecks() {
+export async function prechecks() {
   const isOn = await isOnline()
   if (!isOn) {
     throw new CodedError(ERRORS.NETWORK_OFFLINE, '不能离线工作,请连接网络后重试 🫵.', true)
   }
-
-  console.log('mademine  : preChecks -> ', process.cwd())
 
   const [{ stdout: trackedFiles }, { stdout: untrackedFiles }] = await Promise.all([
     execa('git', ['diff-index', 'HEAD', '--', process.cwd()]),
@@ -45,5 +43,3 @@ async function preChecks() {
     process.exit(1)
   }
 }
-
-export default preChecks

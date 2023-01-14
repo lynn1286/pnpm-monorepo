@@ -1,4 +1,4 @@
-import { CodedError } from './types'
+import { CodedError } from './types.js'
 import chalk from 'chalk'
 
 export function handleError(err: any, exit = true) {

@@ -1,8 +1,9 @@
 #! /usr/bin/env node
 
-const path = require('path')
+import * as path from 'path'
+import * as dotenv from 'dotenv'
 
-require('dotenv').config({
+dotenv.config({
   path: path.resolve(process.cwd(), '.env')
 })
 
@@ -10,4 +11,4 @@ require('dotenv').config({
 |-------------------------------------------------------------------------------
 | 启动 CLI
 */
-require('../lib/index.js')
+import '../lib/index.js'
