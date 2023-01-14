@@ -1,0 +1,16 @@
+{
+  "name": "mademine-design-icons",
+  "version": "1.0.0",
+  "private": true,
+  "description": "pnpm monorepo",
+  "scripts": {
+    "preinstall": "node ./scripts/preinstall.js",
+    "clean": "npm run clean-logs && npm run clean-modules",
+    "clean-logs": "rimraf ./packages/*/npm-debug* && rimraf ./*-debug*",
+    "clean-modules": "rimraf ./packages/*/node_modules/ && rimraf ./node_modules/"
+  },
+  "author": "lynn",
+  "dependencies": {
+    "rimraf": "^4.0.4"
+  }
+}
