@@ -6,22 +6,109 @@
  */
 import { cliHelp } from './cli-help.js'
 import { createFigmaConfig } from './create-figma-config.js'
+import { downloadSvgsToFs } from './download-svgs-to-fs.js'
+import { getFigmaDocument } from './get-figma-document.js'
+import { getIconsPage } from './get-icons-page.js'
+import { getIcons } from './get-icons.js'
 import { prechecks } from './prechecks.js'
+import { renderIdsToSvgs } from './render-ids-to-svgs.js'
+import { CodedError, ERRORS } from './types.js'
 import { handleError } from './utils.js'
+import { render } from './view.js'
 
 const main = async () => {
   await prechecks()
 
-  const file = await cliHelp()
-  const figmaConfig = createFigmaConfig(file)
-  console.log('mademine  : main -> figmaConfig', figmaConfig)
+  const cliParams = await cliHelp()
+  const figmaConfig = createFigmaConfig(cliParams.file)
+  render({ fileKey: cliParams.file })
 
-  return ''
+  /* 1. 请求 figma 文档，获取所有的节点 */
+  render({
+    spinners: [{ text: 'Finding the file in Figma...' }]
+  })
+
+  const document = await getFigmaDocument(figmaConfig)
+  render({
+    spinners: [
+      { success: true, text: 'Found the Figma file ✨' },
+      { text: 'Finding all Icons in the designs...' }
+    ]
+  })
+
+  /* 2. 检索数据, 查找是否存在 Icons 节点  */
+  const iconsCanvas = getIconsPage(document)
+  if (!iconsCanvas) {
+    throw new CodedError(
+      ERRORS.NO_ICONS_PAGE,
+      `预期 Figma 文件中存在 'Icons' 页面 - 你可能需要在 Figma 中增加 'Icons' 页面`
+    )
+  }
+
+  /* 3. 获取 Icons 下的图标集 */
+  const icons = getIcons(iconsCanvas)
+  const iconIds = Object.keys(icons)
+  if (!iconIds.length) {
+    throw new CodedError(
+      ERRORS.NO_ICONS_IN_SETS,
+      '预期一个或多个图标设置在 "Icons" 页面中. 你可能需要在 Figma 中进行分组.'
+    )
+  }
+
+  /* 4. 请求 Figma 服务将 Icon 节点渲染为单独的 SVG */
+  render({
+    spinners: [{ text: 'Rendering on the Figma platform...' }]
+  })
+  const iconSvgUrls = await renderIdsToSvgs(iconIds, figmaConfig)
+
+  /* 5. 下载所有的 icon svg 到本地工作区 */
+  render({
+    spinners: [
+      {
+        success: true,
+        text: 'Rendered Icons on the Figma platform 🙌'
+      }
+    ],
+    progress: {
+      text: 'Gathering Figma renders...',
+      percent: 0
+    }
+  })
+
+  let downloadsCompleted = 0
+  await downloadSvgsToFs(
+    iconSvgUrls,
+    icons,
+    () => {
+      downloadsCompleted += 1
+      render({
+        progress: {
+          text: 'Gathering Figma renders...',
+          percent: downloadsCompleted / iconIds.length
+        }
+      })
+    },
+    cliParams.className
+  )
+
+  render({
+    spinners: [
+      {
+        success: true,
+        text: 'Downloaded and processed SVG renders 👍'
+      },
+      {
+        text: 'Generating React Components...'
+      }
+    ]
+  })
+
+  // return ''
 }
 
 main()
   .then(() => {
-    console.log('成功 👏')
+    console.log('图标构建成功 🎉')
   })
   .catch(err => handleError(err))
 

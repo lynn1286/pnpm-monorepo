@@ -5,14 +5,15 @@ export const cliHelp = async () => {
   const cli = meow(
     `
     Usage
-      $ ${path.basename(process.argv[1])} --file=<file-key>
+      $ ${path.basename(process.argv[1])} --file=<file-key> --className
 
     Options
-      --file, -f    File Key from Figma
-      --help        Show this message
+      --file, -f    来自 Figma 的文件密钥
+      --className , -c  给 icon 添加 className
+      --help        帮助
 
     Examples
-      $ ${path.basename(process.argv[1])} --file=EEggMA9IV81CYzCSI8LFEUOY
+      $ ${path.basename(process.argv[1])} --file=EEggMA9IV81CYzCSI8LFEUOY --className=my-icons
   `,
     {
       importMeta: import.meta,
@@ -21,6 +22,10 @@ export const cliHelp = async () => {
         file: {
           type: 'string',
           alias: 'f'
+        },
+        className: {
+          type: 'string',
+          alias: 'c'
         }
       }
     }
@@ -30,5 +35,8 @@ export const cliHelp = async () => {
     cli.showHelp(1)
   }
 
-  return cli.flags.file
+  return {
+    file: cli.flags.file,
+    className: cli.flags.className
+  }
 }
