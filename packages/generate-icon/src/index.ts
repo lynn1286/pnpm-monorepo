@@ -25,14 +25,14 @@ const main = async () => {
 
   /* 1. 请求 figma 文档，获取所有的节点 */
   render({
-    spinners: [{ text: 'Finding the file in Figma...' }]
+    spinners: [{ text: '正在从 Figma 中查找文档 🤯...' }]
   })
 
   const document = await getFigmaDocument(figmaConfig)
   render({
     spinners: [
-      { success: true, text: 'Found the Figma file ✨' },
-      { text: 'Finding all Icons in the designs...' }
+      { success: true, text: '成功获取到 Figma 文档, 即将进入下一步 ✨' },
+      { text: '正在查找 Figma 文档中的所有 Icon...' }
     ]
   })
 
@@ -57,7 +57,7 @@ const main = async () => {
 
   /* 4. 请求 Figma 服务将 Icon 节点渲染为单独的 SVG */
   render({
-    spinners: [{ text: 'Rendering on the Figma platform...' }]
+    spinners: [{ text: '正在处理所有的 Icon ...' }]
   })
   const iconSvgUrls = await renderIdsToSvgs(iconIds, figmaConfig)
 
@@ -66,11 +66,11 @@ const main = async () => {
     spinners: [
       {
         success: true,
-        text: 'Rendered Icons on the Figma platform 🙌'
+        text: 'svg 生成...'
       }
     ],
     progress: {
-      text: 'Gathering Figma renders...',
+      text: '准备下载 svg...',
       percent: 0
     }
   })
@@ -83,7 +83,7 @@ const main = async () => {
       downloadsCompleted += 1
       render({
         progress: {
-          text: 'Gathering Figma renders...',
+          text: '⚡︎ 当前进度...',
           percent: downloadsCompleted / iconIds.length
         }
       })
@@ -95,10 +95,10 @@ const main = async () => {
     spinners: [
       {
         success: true,
-        text: 'Downloaded and processed SVG renders 👍'
+        text: 'SVG 文件下载成功 👍'
       },
       {
-        text: 'Generating React Components...'
+        text: '即将生成 React 组件...'
       }
     ]
   })

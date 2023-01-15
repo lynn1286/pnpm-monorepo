@@ -3,8 +3,6 @@ import * as cheerio from 'cheerio'
 import * as prettier from 'prettier'
 import * as _ from 'lodash-es'
 import { optimize } from 'svgo'
-import * as fs from 'fs-extra'
-import { handleError } from './utils.js'
 
 export const transformers = {
   /**
@@ -40,15 +38,9 @@ export const transformers = {
   /**
    *  格式化
    */
-  prettify(svgRaw: string) {
-    prettier
-      .resolveConfig(process.cwd())
-      .then(options => {
-        const formatted = prettier.format(svgRaw, { ...options, parser: 'html' })
-
-        return formatted
-      })
-      .catch(err => handleError(err))
+  async prettify(svgRaw: string) {
+    const prettierOptions = prettier.resolveConfig.sync(process.cwd())
+    return prettier.format(svgRaw, { ...prettierOptions, parser: 'html' })
   },
 
   /**
