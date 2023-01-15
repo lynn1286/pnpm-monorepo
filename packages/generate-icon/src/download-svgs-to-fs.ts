@@ -234,6 +234,8 @@ export async function getCurrentIconManifest(): Promise<IIconManifest> {
     'show',
     `HEAD:${gitRelativePathToManifest}`
   ])
+
+  console.log('mademine  : currentManifest -> ', currentManifest)
   return JSON.parse(currentManifest)
 }
 
