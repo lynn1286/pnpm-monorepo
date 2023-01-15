@@ -6,15 +6,21 @@
  */
 import { cliHelp } from './cli-help.js'
 import { createFigmaConfig } from './create-figma-config.js'
-import { downloadSvgsToFs } from './download-svgs-to-fs.js'
+import {
+  downloadSvgsToFs,
+  generateIconManifest,
+  generateReactComponents,
+  swapGeneratedFiles
+} from './download-svgs-to-fs.js'
 import { getFigmaDocument } from './get-figma-document.js'
+import { getGitCustomDiff } from './get-git-custom-diff.js'
 import { getIconsPage } from './get-icons-page.js'
 import { getIcons } from './get-icons.js'
 import { prechecks } from './prechecks.js'
 import { renderIdsToSvgs } from './render-ids-to-svgs.js'
 import { CodedError, ERRORS } from './types.js'
 import { handleError } from './utils.js'
-import { render } from './view.js'
+import { render, unmount } from './view.js'
 
 const main = async () => {
   await prechecks()
@@ -102,6 +108,58 @@ const main = async () => {
       }
     ]
   })
+
+  /* 6. 生成 React 组件 */
+  await generateReactComponents(icons)
+
+  render({
+    spinners: [
+      {
+        success: true,
+        text: '创建 React 组件 ⚛️ ✨'
+      },
+      {
+        text: '生成 Icon Manifest...'
+      }
+    ]
+  })
+
+  /* 6. 创建 Icon Manifest */
+  const [previousIconManifest, nextIconManifest] = await generateIconManifest(icons)
+
+  render({
+    spinners: [
+      {
+        success: true,
+        text: '创建 Icon Manifest 📓 🔥'
+      },
+      {
+        text: '应用更改...'
+      }
+    ]
+  })
+
+  /* 7. 生成文件. */
+  const touchedPaths = await swapGeneratedFiles(previousIconManifest, nextIconManifest)
+
+  render({
+    spinners: [
+      {
+        success: true,
+        text: 'Applied changes to working directory 💇‍'
+      }
+    ]
+  })
+
+  /* 8. 结束. */
+
+  try {
+    render({
+      diff: await getGitCustomDiff(touchedPaths)
+    })
+  } catch (err) {}
+
+  unmount()
 }
 
 main()

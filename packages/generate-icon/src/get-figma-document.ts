@@ -8,7 +8,6 @@ export async function getFigmaDocument(config: IFigmaConfig): Promise<IFigmaDocu
     headers: config.headers
   })
   const data = (await resp.json()) as IFigmaFileResponse
-  console.log('mademine  : fetch -> Figma Api -> document', data)
 
   if (data.status === 403 && data.err === 'Invalid token') {
     throw new CodedError(

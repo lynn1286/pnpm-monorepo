@@ -3,6 +3,7 @@ import chalk from 'chalk'
 import nodeFetch, { Response } from 'node-fetch'
 import isOnline from 'is-online'
 import { unmount } from './view.js'
+import * as _ from 'lodash-es'
 
 /**
  * @description: 错误处理 🙅
@@ -87,5 +88,18 @@ function asyncDelay(timeout: number) {
     setTimeout(() => {
       resolve(undefined)
     }, timeout)
+  })
+}
+
+export function pushObjLeafNodesToArr(obj: {}, arr: string[], accessor: any[] = []) {
+  _.forEach(accessor.length ? _.get(obj, accessor) : obj, (v, k) => {
+    if (v == null) return
+    const currentAccessor = accessor.concat(k)
+    if (typeof v === 'object') {
+      pushObjLeafNodesToArr(obj, arr, currentAccessor)
+    }
+    if (typeof v === 'string') {
+      arr.push(_.get(obj, currentAccessor))
+    }
   })
 }

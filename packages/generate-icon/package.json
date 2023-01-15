@@ -10,14 +10,17 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "build": "tsc",
-    "start": "rimraf lib && tsc --watch"
+    "start": "rimraf lib && tsc --watch",
+    "copy": "node ./scripts/index.js ./src/templates ./lib/templates"
   },
   "keywords": [],
   "author": "lynn",
   "devDependencies": {
+    "@types/fs-extra": "^11.0.1",
     "@types/ink": "^2.0.3",
     "@types/lodash-es": "^4.17.6",
     "@types/node": "18.11.18",
+    "@types/prettier": "^1.16.3",
     "chalk": "^5.2.0",
     "cheerio": "1.0.0-rc.12",
     "dotenv": "^16.0.3",
@@ -30,12 +33,12 @@
     "is-online": "^10.0.0",
     "lodash-es": "^4.17.21",
     "meow": "^11.0.0",
+    "node-copyfile": "^1.1.0",
     "node-fetch": "^3.3.0",
+    "prettier": "^2.0.5",
     "react": "18.2.0",
     "svgo": "^3.0.2",
     "tempy": "^3.0.0",
-    "typescript": "4.9.4",
-    "@types/prettier": "^1.16.3",
-    "prettier": "^2.0.5"
+    "typescript": "4.9.4"
   }
 }

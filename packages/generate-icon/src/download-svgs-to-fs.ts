@@ -3,13 +3,19 @@ import { IIconManifest, IIcons, IIconsSvgUrls, ITemplateIcon } from './types.js'
 import * as path from 'path'
 import { temporaryDirectory } from 'tempy'
 import { labelling } from './labelling.js'
-import * as fs from 'fs-extra'
-import { fetch } from './utils.js'
-import * as prettier from 'prettier'
+import { readFileSync } from 'fs'
+import { readFile, writeFile } from 'fs/promises'
+import { outputFile, remove, copy } from 'fs-extra/esm'
+import { fetch, pushObjLeafNodesToArr } from './utils.js'
+import prettier from 'prettier'
 import * as _ from 'lodash-es'
 import * as ejs from 'ejs'
 import { FILE_PATH_ENTRY, FILE_PATH_MANIFEST, FILE_PATH_TYPES } from './consts.js'
 import { execa } from 'execa'
+import { fileURLToPath } from 'url'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 let currentTempDir = temporaryDirectory()
 
@@ -39,7 +45,7 @@ export async function downloadSvgsToFs(
         .then(svgRaw => transformers.prettify(svgRaw))
 
       const filePath = path.resolve(currentTempDir, labelling.filePathFromIcon(icons[iconId]))
-      await fs.outputFile(filePath, processedSvg, { encoding: 'utf8' })
+      await outputFile(filePath, processedSvg, { encoding: 'utf8' })
       currentListOfAddedFiles.push(filePath)
       onProgress()
     })
@@ -53,7 +59,7 @@ export async function downloadSvgsToFs(
  */
 export function filePathToSVGinJSXSync(filePath: string) {
   const absFilePath = path.resolve(currentTempDir, filePath)
-  const svgRaw = fs.readFileSync(absFilePath, { encoding: 'utf8' })
+  const svgRaw = readFileSync(absFilePath, { encoding: 'utf8' })
   return transformers.readyForJSX(svgRaw)
 }
 
@@ -64,7 +70,7 @@ export function filePathToSVGinJSXSync(filePath: string) {
  */
 export async function generateReactComponents(icons: IIcons) {
   const getTemplateSource = templateFile =>
-    fs.readFile(path.resolve(__dirname, './templates/', templateFile), {
+    readFile(path.resolve(__dirname, '../templates/', templateFile), {
       encoding: 'utf8'
     })
   const templates = {
@@ -146,7 +152,7 @@ export async function generateReactComponents(icons: IIcons) {
       'src/',
       templateHelpers.iconToReactFileName(icon)
     )
-    await fs.outputFile(iconComponentFilePath, iconSource)
+    await outputFile(iconComponentFilePath, iconSource)
     currentListOfAddedFiles.push(iconComponentFilePath)
   }
 
@@ -160,12 +166,12 @@ export async function generateReactComponents(icons: IIcons) {
     parser: 'typescript'
   })
   const entryFilePath = path.resolve(currentTempDir, FILE_PATH_ENTRY)
-  await fs.outputFile(entryFilePath, entrySource)
+  await outputFile(entryFilePath, entrySource)
   currentListOfAddedFiles.push(entryFilePath)
 
   /* Generate Type Modules */
   const typeDepsFilePath = path.resolve(currentTempDir, FILE_PATH_TYPES)
-  await fs.outputFile(typeDepsFilePath, templates.types)
+  await outputFile(typeDepsFilePath, templates.types)
   currentListOfAddedFiles.push(typeDepsFilePath)
 }
 
@@ -184,7 +190,7 @@ export async function generateIconManifest(icons: IIcons) {
     parser: 'json'
   })
   const previousIconManifest = await getCurrentIconManifest()
-  await fs.writeFile(iconManifestFilePath, iconManifestRaw, {
+  await writeFile(iconManifestFilePath, iconManifestRaw, {
     encoding: 'utf8'
   })
   currentListOfAddedFiles.push(iconManifestFilePath)
@@ -229,4 +235,26 @@ export async function getCurrentIconManifest(): Promise<IIconManifest> {
     `HEAD:${gitRelativePathToManifest}`
   ])
   return JSON.parse(currentManifest)
+}
+
+export async function swapGeneratedFiles(
+  previousIconManifest: IIconManifest,
+  nextIconManifest: IIconManifest
+): Promise<string[]> {
+  let generatedFilePaths = []
+  pushObjLeafNodesToArr(previousIconManifest, generatedFilePaths)
+  pushObjLeafNodesToArr(nextIconManifest, generatedFilePaths)
+  generatedFilePaths = generatedFilePaths.concat([FILE_PATH_ENTRY, FILE_PATH_TYPES])
+  const topLevelDirs: string[] = _.uniq(
+    generatedFilePaths.map(filePath => filePath.replace(/^([\w-]+).*/, '$1'))
+  )
+  for (const i in topLevelDirs) {
+    const topLevelDir = topLevelDirs[i]
+    await remove(path.resolve(process.cwd(), topLevelDir))
+  }
+  await remove(path.resolve(process.cwd(), FILE_PATH_MANIFEST))
+
+  await copy(currentTempDir, process.cwd())
+
+  return [].concat(topLevelDirs, FILE_PATH_MANIFEST)
 }
