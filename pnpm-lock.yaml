@@ -13,6 +13,7 @@ importers:
       '@types/ink': ^2.0.3
       '@types/lodash-es': ^4.17.6
       '@types/node': 18.11.18
+      '@types/prettier': ^2.7.2
       chalk: ^5.2.0
       cheerio: 1.0.0-rc.12
       dotenv: ^16.0.3
@@ -35,6 +36,7 @@ importers:
       '@types/ink': 2.0.3_react@18.2.0
       '@types/lodash-es': 4.17.6
       '@types/node': 18.11.18
+      '@types/prettier': 2.7.2
       chalk: 5.2.0
       cheerio: 1.0.0-rc.12
       dotenv: 16.0.3
@@ -290,6 +292,10 @@ packages:
 
   /@types/normalize-package-data/2.4.1:
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
+    dev: true
+
+  /@types/prettier/2.7.2:
+    resolution: {integrity: sha512-KufADq8uQqo1pYKVIYzfKbJfBAc0sOeXqGbFaSpv8MRmC/zXgowNZmFcbngndGk922QDmOASEXUZCaY48gs4cg==}
     dev: true
 
   /@types/prop-types/15.7.5:

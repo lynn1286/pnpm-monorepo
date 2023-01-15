@@ -6,7 +6,7 @@ import { loadConfig, Config } from 'svgo'
  * @return {*}
  */
 export async function getSvgoConfig(className?: string) {
-  // 读取配置 - 如果有的话
+  // 读取 svgo.config.js - 如果有的话 . github: https://github.com/svg/svgo
   const config = (await loadConfig()) as Config
 
   if (config) {

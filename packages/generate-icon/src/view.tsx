@@ -47,16 +47,18 @@ const CliView = ({ state }: ICliViewProps) => {
         <Box marginLeft={1} flexDirection="column">
           {state.spinners
             .filter(entry => entry.success)
-            .map(entry => (
-              <Box marginLeft={1} key={entry.text}>
-                <Text color="green">✓</Text> <Text>{entry.text}</Text>
-              </Box>
-            ))}
+            .map(entry => {
+              return (
+                <Text key={entry.text}>
+                  <Text color="green">✓</Text> <Text>{entry.text}</Text>
+                </Text>
+              )
+            })}
           {state.spinners
             .filter(entry => !entry.success)
-            .map(entry => (
-              <Spinner key={entry.text} text={entry.text} />
-            ))}
+            .map(entry => {
+              return <Spinner key={entry.text} text={entry.text} />
+            })}
         </Box>
       )}
 
