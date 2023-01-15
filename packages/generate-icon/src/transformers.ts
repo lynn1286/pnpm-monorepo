@@ -1,16 +1,14 @@
 import { getSvgoConfig } from './get-svgo.js'
 import * as cheerio from 'cheerio'
-import * as prettier from 'prettier'
 import * as _ from 'lodash-es'
 import { optimize } from 'svgo'
+import prettier from 'prettier'
 
 export const transformers = {
   /**
    * 处理 svg 源码
    */
   async passSVGO(svgRaw: string, className?: string) {
-    console.log('mademine  : passSVGO -> className', className)
-
     const config = await getSvgoConfig(className)
     const { data } = optimize(svgRaw, config)
     return data as string
