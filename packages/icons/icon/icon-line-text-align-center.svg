@@ -1,0 +1,15 @@
+<svg
+  width="48"
+  height="48"
+  viewBox="0 0 48 48"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  class="mm-icon"
+>
+  <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M5 7H43V11H5V7ZM14 17H34V21H14V17ZM14 37H34V41H14V37ZM7 27H41V31H7V27Z"
+    fill="currentColor"
+  />
+</svg>

@@ -1,0 +1,17 @@
+<svg
+  width="48"
+  height="48"
+  viewBox="0 0 48 48"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  class="mm-icon"
+>
+  <path fill="currentColor" d="M8 8H16V16H8z" />
+  <path opacity=".5" fill="currentColor" d="M24 8H32V16H24z" />
+  <path opacity=".75" fill="currentColor" d="M16 16H24V24H16z" />
+  <path opacity=".3" fill="currentColor" d="M32 16H40V24H32z" />
+  <path fill="currentColor" d="M8 24H16V32H8z" />
+  <path opacity=".5" fill="currentColor" d="M24 24H32V32H24z" />
+  <path opacity=".75" fill="currentColor" d="M16 32H24V40H16z" />
+  <path opacity=".3" fill="currentColor" d="M32 32H40V40H32z" />
+</svg>

@@ -1,0 +1,21 @@
+<svg
+  width="48"
+  height="48"
+  viewBox="0 0 48 48"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  class="mm-icon"
+>
+  <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M41.9949 8.82373C41.9037 7.24892 40.5977 6 39 6H9L8.82373 6.00509C7.24892 6.09634 6 7.40232 6 9V39L6.00509 39.1763C6.09634 40.7511 7.40232 42 9 42H27V38H10V10H38V27H42V9L41.9949 8.82373ZM35 17V27H31L27 31V35H13V33L21 24L25 28L35 17ZM19 19V13H13V19H19Z"
+    fill="currentColor"
+  />
+  <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M33.1716 36L29.636 39.5355L32.4645 42.364L36 38.8284L39.5355 42.364L42.364 39.5355L38.8284 36L42.364 32.4645L39.5355 29.636L36 33.1716L32.4645 29.636L29.636 32.4645L33.1716 36Z"
+    fill="currentColor"
+  />
+</svg>

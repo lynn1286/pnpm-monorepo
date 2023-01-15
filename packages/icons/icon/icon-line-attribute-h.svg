@@ -1,0 +1,11 @@
+<svg
+  width="48"
+  height="48"
+  viewBox="0 0 48 48"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  class="mm-icon"
+>
+  <path d="M12 8H16V40H12V8ZM32 8H36V40H32V8Z" fill="currentColor" />
+  <path d="M13 26L13 22L35 22V26L13 26Z" fill="currentColor" />
+</svg>

@@ -203,6 +203,7 @@ export async function generateIconManifest(icons: IIcons) {
  * @return {*}
  */
 export function iconsToManifest(icons: IIcons): IIconManifest {
+  console.log('mademine  : icons ->', icons)
   return Object.keys(icons).reduce((iconManifest: IIconManifest, iconId) => {
     const icon = icons[iconId]
 
@@ -235,7 +236,6 @@ export async function getCurrentIconManifest(): Promise<IIconManifest> {
     `HEAD:${gitRelativePathToManifest}`
   ])
 
-  console.log('mademine  : currentManifest -> ', currentManifest)
   return JSON.parse(currentManifest)
 }
 
