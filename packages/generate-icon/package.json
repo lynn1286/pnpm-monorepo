@@ -1,6 +1,6 @@
 {
   "name": "generate-icon",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "author": "lynn <lynn1286@126.com>",
   "description": "Generator for React Icons",
   "keywords": [
@@ -20,7 +20,8 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "build": "rimraf lib && tsc",
-    "start": "rimraf lib && tsc --watch"
+    "start": "rimraf lib && tsc --watch",
+    "prepublishOnly": "pnpm build"
   },
   "devDependencies": {
     "@types/fs-extra": "^11.0.1",

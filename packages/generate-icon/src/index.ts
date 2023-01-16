@@ -21,8 +21,15 @@ import { renderIdsToSvgs } from './render-ids-to-svgs.js'
 import { CodedError, ERRORS } from './types.js'
 import { handleError } from './utils.js'
 import { render, unmount } from './view.js'
+import * as path from 'path'
+import * as dotenv from 'dotenv'
 
 const main = async () => {
+  // 设置环境变量
+  dotenv.config({
+    path: path.resolve(process.cwd(), '.env')
+  })
+
   await prechecks()
 
   const cliParams = await cliHelp()
