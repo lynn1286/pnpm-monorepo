@@ -16,7 +16,7 @@
   ],
   "type": "module",
   "bin": {
-    "generate-icon": "./bin/index.js"
+    "generate-icon": "./lib/bin/index.js"
   },
   "scripts": {
     "preinstall": "npx only-allow pnpm",
