@@ -1,20 +1,31 @@
 {
   "name": "@mademine/generate-icon",
-  "version": "1.0.0",
-  "private": true,
+  "version": "0.1.0",
+  "private": false,
+  "author": "lynn <lynn1286@126.com>",
   "description": "Generator for React Icons",
+  "keywords": [
+    "icon",
+    "generate icon",
+    "react icon"
+  ],
+  "files": [
+    "lib",
+    "templates",
+    "README.md"
+  ],
   "type": "module",
+  "types": "lib/types",
   "bin": {
     "generate-icon": "./bin/index.js"
   },
+  "main": "./bin/index.js",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "build": "tsc",
     "start": "rimraf lib && tsc --watch",
     "copy": "node ./scripts/index.js ./src/templates ./lib/templates"
   },
-  "keywords": [],
-  "author": "lynn",
   "devDependencies": {
     "@types/fs-extra": "^11.0.1",
     "@types/ink": "^2.0.3",
