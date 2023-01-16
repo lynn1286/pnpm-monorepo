@@ -10,21 +10,19 @@
     "react icon"
   ],
   "files": [
+    "bin",
     "lib",
     "templates",
     "README.md"
   ],
   "type": "module",
-  "types": "lib/types",
   "bin": {
     "generate-icon": "./bin/index.js"
   },
-  "main": "./bin/index.js",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "build": "tsc",
-    "start": "rimraf lib && tsc --watch",
-    "copy": "node ./scripts/index.js ./src/templates ./lib/templates"
+    "build": "rimraf lib && tsc",
+    "start": "rimraf lib && tsc --watch"
   },
   "devDependencies": {
     "@types/fs-extra": "^11.0.1",
@@ -51,5 +49,8 @@
     "svgo": "^3.0.2",
     "tempy": "^3.0.0",
     "typescript": "4.9.4"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
   }
 }
