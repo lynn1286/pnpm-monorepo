@@ -1,6 +1,6 @@
 {
   "name": "generate-icon",
-  "version": "0.1.5",
+  "version": "0.1.9",
   "author": "lynn <lynn1286@126.com>",
   "description": "Generator for React Icons",
   "keywords": [
@@ -9,13 +9,14 @@
     "react icon"
   ],
   "files": [
+    "bin",
     "lib",
     "templates",
     "README.md"
   ],
   "type": "module",
   "bin": {
-    "generate-icon": "./lib/bin/index.js"
+    "generate-icon": "./bin/index.js"
   },
   "scripts": {
     "preinstall": "npx only-allow pnpm",
