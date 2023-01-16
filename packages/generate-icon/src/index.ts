@@ -29,11 +29,10 @@ const main = async () => {
   const figmaConfig = createFigmaConfig(cliParams.file)
   render({ fileKey: cliParams.file })
 
-  /* 1. 请求 figma 文档，获取所有的节点 */
+  /* 1. 请求 figma , 获取所有文档 */
   render({
-    spinners: [{ text: '正在从 Figma 中查找文档 🤯...' }]
+    spinners: [{ text: '正在从 Figma 中获取文档 🤯...' }]
   })
-
   const document = await getFigmaDocument(figmaConfig)
   render({
     spinners: [
@@ -42,22 +41,23 @@ const main = async () => {
     ]
   })
 
-  /* 2. 检索数据, 查找是否存在 Icons 节点  */
+  /* 2. 遍历查找 Icons 对象   */
   const iconsCanvas = getIconsPage(document)
   if (!iconsCanvas) {
     throw new CodedError(
       ERRORS.NO_ICONS_PAGE,
-      `预期 Figma 文件中存在 'Icons' 页面 - 你可能需要在 Figma 中增加 'Icons' 页面`
+      `预期 Figma 文档中应该存在 'Icons' 对象, 但没有找到 😭 - 你可能需要在 Figma 中创建 'Icons' 画布`
     )
   }
 
-  /* 3. 获取 Icons 下的图标集 */
+  /* 3. 遍历 Icons 对象下 children - 组装需要的数据 */
   const icons = getIcons(iconsCanvas)
+  console.log('mademine  : icons', icons)
   const iconIds = Object.keys(icons)
   if (!iconIds.length) {
     throw new CodedError(
       ERRORS.NO_ICONS_IN_SETS,
-      '预期一个或多个图标设置在 "Icons" 页面中. 你可能需要在 Figma 中进行分组.'
+      '未读取到任何 svg 文件, 请确认是否严格按照 Figma 文档创建 icon.'
     )
   }
 
