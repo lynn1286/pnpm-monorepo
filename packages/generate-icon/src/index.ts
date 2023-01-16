@@ -52,35 +52,33 @@ const main = async () => {
 
   /* 3. 遍历 Icons 对象下 children - 组装需要的数据 */
   const icons = getIcons(iconsCanvas)
-  console.log('mademine  : icons', icons)
   const iconIds = Object.keys(icons)
   if (!iconIds.length) {
     throw new CodedError(
       ERRORS.NO_ICONS_IN_SETS,
-      '未读取到任何 svg 文件, 请确认是否严格按照 Figma 文档创建 icon.'
+      '未读取到任何 svg 文件, 请确认 Figma 中文件是否存在.'
     )
   }
 
-  /* 4. 请求 Figma 服务将 Icon 节点渲染为单独的 SVG */
+  /* 4. 根据 icon id 得到 svg url */
   render({
-    spinners: [{ text: '正在处理所有的 Icon ...' }]
+    spinners: [{ text: '根据 icon id 得到 svg url...' }]
   })
   const iconSvgUrls = await renderIdsToSvgs(iconIds, figmaConfig)
 
-  /* 5. 下载所有的 icon svg 到本地工作区 */
+  /* 5. 下载 svg */
   render({
     spinners: [
       {
         success: true,
-        text: 'svg 生成...'
+        text: '准备下载 svg 文件...'
       }
     ],
     progress: {
-      text: '准备下载 svg...',
+      text: '当前进度...',
       percent: 0
     }
   })
-
   let downloadsCompleted = 0
   await downloadSvgsToFs(
     iconSvgUrls,
@@ -89,70 +87,65 @@ const main = async () => {
       downloadsCompleted += 1
       render({
         progress: {
-          text: '⚡︎ 当前进度...',
+          text: '当前进度...',
           percent: downloadsCompleted / iconIds.length
         }
       })
     },
     cliParams.className
   )
-
   render({
     spinners: [
       {
         success: true,
-        text: 'SVG 文件下载成功 👍'
+        text: '文件下载成功 👏'
       },
       {
-        text: '即将生成 React 组件...'
+        text: '即将创建 React 组件...'
       }
     ]
   })
 
   /* 6. 生成 React 组件 */
   await generateReactComponents(icons)
-
   render({
     spinners: [
       {
         success: true,
-        text: '创建 React 组件 ⚛️ ✨'
+        text: 'React 组件创建成功 ⚛️ '
       },
       {
-        text: '生成 Icon Manifest...'
+        text: '即将创建 Manifest 文件...'
       }
     ]
   })
 
-  /* 6. 创建 Icon Manifest */
+  /* 6. 创建 Manifest */
   const [previousIconManifest, nextIconManifest] = await generateIconManifest(icons)
-
   render({
     spinners: [
       {
         success: true,
-        text: '创建 Icon Manifest 📓 🔥'
+        text: '创建 Manifest 成功 📓 🔥'
       },
       {
-        text: '应用更改...'
+        text: '写入 Manifest 文件...'
       }
     ]
   })
 
   /* 7. 生成文件. */
   const touchedPaths = await swapGeneratedFiles(previousIconManifest, nextIconManifest)
-
   render({
     spinners: [
       {
         success: true,
-        text: 'Applied changes to working directory 💇‍'
+        text: '对工作目录应用更改 💇‍'
       }
     ]
   })
 
-  /* 8. 结束. */
-
+  /* 8. 输入 git 差异. */
   try {
     render({
       diff: await getGitCustomDiff(touchedPaths)
@@ -164,7 +157,7 @@ const main = async () => {
 
 main()
   .then(() => {
-    console.log('图标构建成功 🎉')
+    console.log('\n 图标构建成功 🎉')
   })
   .catch(err => handleError(err))
 

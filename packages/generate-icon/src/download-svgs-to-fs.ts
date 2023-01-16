@@ -23,10 +23,6 @@ let currentListOfAddedFiles = []
 
 /**
  * @description: 下载 svgs 到临时目录
- * @param {IIconsSvgUrls} urls
- * @param {IIcons} icons
- * @param {function} onProgress
- * @return {*}
  */
 export async function downloadSvgsToFs(
   urls: IIconsSvgUrls,
@@ -64,7 +60,7 @@ export function filePathToSVGinJSXSync(filePath: string) {
 }
 
 /**
- * @description: 生成 React 组件
+ * @description: 根据已有数据生成各项模块 - 1. React 组件 2. 入口文件 3. 类型文件
  * @param {IIcons} icons
  * @return {*}
  */
@@ -106,13 +102,13 @@ export async function generateReactComponents(icons: IIcons) {
       return firstIcon.type
     },
     iconToComponentName(icon: ITemplateIcon) {
-      return `${icon.jsxName}Icon`
+      return `Icon${icon.jsxName}`
     },
     iconToPropsName(icon: ITemplateIcon) {
-      return `${icon.jsxName}IconProps`
+      return `Icon${icon.jsxName}Props`
     },
     iconToReactFileName(icon: ITemplateIcon) {
-      return `${icon.jsxName}Icon.tsx`
+      return `Icon${icon.jsxName}.tsx`
     },
     iconToSVGSourceAsJSX(icon: ITemplateIcon, size: string, type: string) {
       const filePath = labelling.filePathFromIcon({
@@ -136,7 +132,8 @@ export async function generateReactComponents(icons: IIcons) {
   }
 
   const prettierOptions = prettier.resolveConfig.sync(process.cwd())
-  /* Generate Icon Component Modules */
+
+  // 根据模版生成 React 组件
   for (const i in iconsWithVariants) {
     const icon = iconsWithVariants[i]
     let iconSourceRaw = await ejs.render(templates.icon, {
@@ -156,7 +153,7 @@ export async function generateReactComponents(icons: IIcons) {
     currentListOfAddedFiles.push(iconComponentFilePath)
   }
 
-  /* Generate Entry Module */
+  // 生成入口文件
   let entrySourceRaw = await ejs.render(templates.entry, {
     icons: iconsWithVariants,
     ...templateHelpers
@@ -169,7 +166,7 @@ export async function generateReactComponents(icons: IIcons) {
   await outputFile(entryFilePath, entrySource)
   currentListOfAddedFiles.push(entryFilePath)
 
-  /* Generate Type Modules */
+  // 生成 Ts 类型文件
   const typeDepsFilePath = path.resolve(currentTempDir, FILE_PATH_TYPES)
   await outputFile(typeDepsFilePath, templates.types)
   currentListOfAddedFiles.push(typeDepsFilePath)
@@ -198,12 +195,11 @@ export async function generateIconManifest(icons: IIcons) {
 }
 
 /**
- * @description:
+ * @description: 组装数据
  * @param {IIcons} icons
  * @return {*}
  */
 export function iconsToManifest(icons: IIcons): IIconManifest {
-  console.log('mademine  : icons ->', icons)
   return Object.keys(icons).reduce((iconManifest: IIconManifest, iconId) => {
     const icon = icons[iconId]
 
@@ -222,7 +218,7 @@ export function iconsToManifest(icons: IIcons): IIconManifest {
 }
 
 /**
- * @description:
+ * @description: 获取现有的 Manifest 文件
  * @return {*}
  */
 export async function getCurrentIconManifest(): Promise<IIconManifest> {
@@ -239,6 +235,10 @@ export async function getCurrentIconManifest(): Promise<IIconManifest> {
   return JSON.parse(currentManifest)
 }
 
+/**
+ * @description: 将 currentTempDir 的数据全部写入 src 目录内
+ * @return {*}
+ */
 export async function swapGeneratedFiles(
   previousIconManifest: IIconManifest,
   nextIconManifest: IIconManifest

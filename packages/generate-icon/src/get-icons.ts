@@ -34,8 +34,8 @@ export function getIcons(iconsCanvas: IFigmaCanvas): IIcons {
             jsxName,
             svgName,
             id: iconNode.id,
-            size: labelling.sizeFromFrameNodeName(iconSetNode.name),
-            type: labelling.typeFromFrameNodeName(iconSetNode.name)
+            size: labelling.sizeFromFrameNodeName(iconSetNode.name), // 来自 Figma 的文件命名规范 ： Icons/48 -> :48
+            type: labelling.typeFromFrameNodeName(iconSetNode.name) // 来自 Figma 的文件命名规范 ： Icons/48 -> Icons
           }
         }
       })

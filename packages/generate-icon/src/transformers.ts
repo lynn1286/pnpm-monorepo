@@ -6,7 +6,7 @@ import prettier from 'prettier'
 
 export const transformers = {
   /**
-   * 处理 svg 源码
+   * 读取 svgo 配置文件并优化 svg 源码
    */
   async passSVGO(svgRaw: string, className?: string) {
     const config = await getSvgoConfig(className)

@@ -8,7 +8,7 @@ import {
 import { fetch } from './utils.js'
 
 /**
- * @description: 生成 svg
+ * @description: 请求 svg url
  * @param {string} ids
  * @param {IFigmaConfig} config
  * @return {*}
@@ -31,26 +31,20 @@ export async function renderIdsToSvgs(ids: string[], config: IFigmaConfig): Prom
   if (!resp.ok) {
     switch (resp.status) {
       case 400:
-        throw new CodedError(ERRORS.FIGMA_API, `请求 Figma API 遇到错误 👉 \n${error}`)
+        throw new CodedError(ERRORS.FIGMA_API, `Bad Request 👉 \n${error}`)
       case 404:
-        throw new CodedError(
-          ERRORS.FIGMA_API,
-          '在 Figma 中找不到 icons , 检查它们是否存在，然后重试.'
-        )
+        throw new CodedError(ERRORS.FIGMA_API, '没有找到相关资源, 请确认您的icon id 是否正确.')
       case 500:
-        throw new CodedError(ERRORS.FIGMA_API, 'Figma 无法渲染图标. 🥶')
+        throw new CodedError(ERRORS.FIGMA_API, '服务器遇到错误 , 请稍后重试. 🥶')
       default:
-        throw new CodedError(
-          ERRORS.UNEXPECTED,
-          `将 icon 渲染为 SVG 时出错.\n${resp.status}\n${error}`
-        )
+        throw new CodedError(ERRORS.UNEXPECTED, `请求遇到错误了 🫠 \n${resp.status}\n${error}`)
     }
   }
 
   if (!data.images || !Object.keys(data.images).length) {
     throw new CodedError(
       ERRORS.UNEXPECTED,
-      `在 Figma 中渲染 icon 后发生错误 👉 \n${JSON.stringify(data, null, 2)}`
+      `Figma 请求成功了, 但是貌似没有找到相关资源 👉 \n${JSON.stringify(data, null, 2)}`
     )
   }
 
