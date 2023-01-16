@@ -62,7 +62,7 @@ importers:
 
   packages/icons:
     specifiers:
-      generate-icon: workspace:^0.1.0
+      generate-icon: workspace:^0.1.4
       react: 18.2.0
     dependencies:
       generate-icon: link:../generate-icon

@@ -1,6 +1,6 @@
 {
   "name": "generate-icon",
-  "version": "0.1.1",
+  "version": "0.1.4",
   "author": "lynn <lynn1286@126.com>",
   "description": "Generator for React Icons",
   "keywords": [
@@ -9,7 +9,6 @@
     "react icon"
   ],
   "files": [
-    "bin",
     "lib",
     "templates",
     "README.md"
@@ -41,7 +40,6 @@
     "is-online": "^10.0.0",
     "lodash-es": "^4.17.21",
     "meow": "^11.0.0",
-    "node-copyfile": "^1.1.0",
     "node-fetch": "^3.3.0",
     "prettier": "^2.0.5",
     "react": "18.2.0",
