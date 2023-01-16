@@ -1,7 +1,6 @@
 {
-  "name": "@mademine/generate-icon",
+  "name": "generate-icon",
   "version": "0.1.0",
-  "private": false,
   "author": "lynn <lynn1286@126.com>",
   "description": "Generator for React Icons",
   "keywords": [
