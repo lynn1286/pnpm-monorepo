@@ -1,8 +1,8 @@
-import * as React from "react";
-import { IconProps } from "./types";
+import * as React from 'react'
+import type { IconProps } from './types'
 
 export const IconZoomOut = React.forwardRef<SVGSVGElement, IconProps>(
-  ({ color = "currentColor", ...props }, forwardedRef) => {
+  ({ color = 'currentColor', ...props }, forwardedRef) => {
     return (
       <svg
         width="48"
@@ -20,15 +20,10 @@ export const IconZoomOut = React.forwardRef<SVGSVGElement, IconProps>(
           fillRule="evenodd"
           clipRule="evenodd"
         />
-        <path
-          d="M15 20V24H31V20H15Z"
-          fill={color}
-          fillRule="evenodd"
-          clipRule="evenodd"
-        />
+        <path d="M15 20V24H31V20H15Z" fill={color} fillRule="evenodd" clipRule="evenodd" />
       </svg>
-    );
+    )
   }
-);
+)
 
-export default IconZoomOut;
+export default IconZoomOut

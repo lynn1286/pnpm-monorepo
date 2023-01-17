@@ -1,8 +1,8 @@
-import * as React from "react";
-import { IconProps } from "./types";
+import * as React from 'react'
+import type { IconProps } from './types'
 
 export const IconMobile = React.forwardRef<SVGSVGElement, IconProps>(
-  ({ color = "currentColor", ...props }, forwardedRef) => {
+  ({ color = 'currentColor', ...props }, forwardedRef) => {
     return (
       <svg
         width="48"
@@ -22,8 +22,8 @@ export const IconMobile = React.forwardRef<SVGSVGElement, IconProps>(
         />
         <path d="M22 32H26V36H22V32Z" fill={color} />
       </svg>
-    );
+    )
   }
-);
+)
 
-export default IconMobile;
+export default IconMobile

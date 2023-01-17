@@ -1,11 +1,12 @@
-import { CodedError, ERRORS, IFigmaConfig, IFigmaDocument, IFigmaFileResponse } from './types.js'
+import type { IFigmaConfig, IFigmaDocument, IFigmaFileResponse } from './types.js'
+import { CodedError, ERRORS } from './types.js'
 import { fetch } from './utils.js'
 
 export async function getFigmaDocument(config: IFigmaConfig): Promise<IFigmaDocument> {
   const url = `${config.baseUrl}/v1/files/${config.fileKey}` // Figma Api - 获取文件集合
 
   const resp = await fetch(url, {
-    headers: config.headers
+    headers: config.headers,
   })
   const data = (await resp.json()) as IFigmaFileResponse
 

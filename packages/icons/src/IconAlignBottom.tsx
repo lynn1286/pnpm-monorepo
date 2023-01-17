@@ -1,8 +1,8 @@
-import * as React from "react";
-import { IconProps } from "./types";
+import * as React from 'react'
+import type { IconProps } from './types'
 
 export const IconAlignBottom = React.forwardRef<SVGSVGElement, IconProps>(
-  ({ color = "currentColor", ...props }, forwardedRef) => {
+  ({ color = 'currentColor', ...props }, forwardedRef) => {
     return (
       <svg
         width="48"
@@ -25,8 +25,8 @@ export const IconAlignBottom = React.forwardRef<SVGSVGElement, IconProps>(
           fill={color}
         />
       </svg>
-    );
+    )
   }
-);
+)
 
-export default IconAlignBottom;
+export default IconAlignBottom

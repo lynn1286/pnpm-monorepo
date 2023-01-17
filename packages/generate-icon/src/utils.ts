@@ -1,6 +1,8 @@
-import { CodedError, ERRORS, RequestInitWithRetry } from './types.js'
+import type { RequestInitWithRetry } from './types.js'
+import { CodedError, ERRORS } from './types.js'
 import chalk from 'chalk'
-import nodeFetch, { Response } from 'node-fetch'
+import type { Response } from 'node-fetch'
+import nodeFetch from 'node-fetch'
 import isOnline from 'is-online'
 import { unmount } from './view.js'
 import * as _ from 'lodash-es'
@@ -36,7 +38,7 @@ let currentOnlineCheck = null
 
 const defaultRetry = {
   delay: 1000,
-  retries: 2
+  retries: 2,
 }
 
 /**
@@ -52,10 +54,10 @@ export function fetch(url: string, fetchOptions: RequestInitWithRetry = {}): Pro
   return new Promise((resolve, reject) => {
     const attemptFetch = (remainingRetries: number) => {
       nodeFetch(url, fetchOptions)
-        .then(res => {
+        .then((res) => {
           resolve(res)
         })
-        .catch(async err => {
+        .catch(async (err) => {
           if (remainingRetries > 0) {
             await asyncDelay(retryOptions.delay)
             attemptFetch(--remainingRetries)
@@ -84,7 +86,7 @@ export function fetch(url: string, fetchOptions: RequestInitWithRetry = {}): Pro
  * @return {*}
  */
 function asyncDelay(timeout: number) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve(undefined)
     }, timeout)

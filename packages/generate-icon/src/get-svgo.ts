@@ -1,4 +1,5 @@
-import { loadConfig, Config } from 'svgo'
+import type { Config } from 'svgo'
+import { loadConfig } from 'svgo'
 
 /**
  * @description: 返回 svgo config
@@ -47,10 +48,10 @@ export async function getSvgoConfig(className?: string) {
       {
         name: 'addClassesToSVGElement',
         params: {
-          className: className ?? ' '
-        }
-      }
-    ]
+          className: className ?? ' ',
+        },
+      },
+    ],
   }
 
   return defaultConfig

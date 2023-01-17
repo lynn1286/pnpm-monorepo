@@ -1,4 +1,4 @@
-import { IFigmaConfig } from './types.js'
+import type { IFigmaConfig } from './types.js'
 import { Headers } from 'node-fetch'
 
 /**
@@ -11,7 +11,7 @@ export function createFigmaConfig(fileKey: string): IFigmaConfig {
     baseUrl: 'https://api.figma.com',
     fileKey,
     headers: new Headers({
-      'X-Figma-Token': process.env.FIGMA_ACCESS_TOKEN // figma access token - 在 figma 个人中心 settings 中设置获取
-    })
+      'X-Figma-Token': process.env.FIGMA_ACCESS_TOKEN, // figma access token - 在 figma 个人中心 settings 中设置获取
+    }),
   }
 }

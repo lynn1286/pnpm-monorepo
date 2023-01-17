@@ -1,8 +1,8 @@
-import * as React from "react";
-import { IconProps } from "./types";
+import * as React from 'react'
+import type { IconProps } from './types'
 
 export const IconSendToBack = React.forwardRef<SVGSVGElement, IconProps>(
-  ({ color = "currentColor", ...props }, forwardedRef) => {
+  ({ color = 'currentColor', ...props }, forwardedRef) => {
     return (
       <svg
         width="48"
@@ -20,12 +20,7 @@ export const IconSendToBack = React.forwardRef<SVGSVGElement, IconProps>(
           fillRule="evenodd"
           clipRule="evenodd"
         />
-        <path
-          d="M26 25V40H22V25H26Z"
-          fill={color}
-          fillRule="evenodd"
-          clipRule="evenodd"
-        />
+        <path d="M26 25V40H22V25H26Z" fill={color} fillRule="evenodd" clipRule="evenodd" />
         <path
           d="M25.1534 13.418C24.4619 12.9299 23.5381 12.9299 22.8466 13.418L5.84664 25.418C5.3497 25.7688 5.03941 26.3266 5.0035 26.9339C4.96758 27.5411 5.20995 28.1316 5.66208 28.5385L10.3475 32.7554L13.3379 30.0654L10.2 27.2412L24 17.5L37.8 27.2412L34.6621 30.0654L37.6748 32.7354L42.3379 28.5385C42.7901 28.1316 43.0324 27.5411 42.9965 26.9339C42.9606 26.3266 42.6503 25.7688 42.1534 25.418L25.1534 13.418Z"
           fill={color}
@@ -39,8 +34,8 @@ export const IconSendToBack = React.forwardRef<SVGSVGElement, IconProps>(
           clipRule="evenodd"
         />
       </svg>
-    );
+    )
   }
-);
+)
 
-export default IconSendToBack;
+export default IconSendToBack

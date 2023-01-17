@@ -1,4 +1,4 @@
-import { IFigmaCanvas, IIcons } from './types.js'
+import type { IFigmaCanvas, IIcons } from './types.js'
 import * as _ from 'lodash-es'
 import { labelling } from './labelling.js'
 
@@ -11,7 +11,7 @@ export function getIcons(iconsCanvas: IFigmaCanvas): IIcons {
   return iconsCanvas.children.reduce((icons: IIcons, iconSetNode) => {
     // 筛选数据 - 允许 icon 存放在 FRAME 或者  GROUP 下
     if (iconSetNode.type === 'FRAME' || iconSetNode.type === 'GROUP') {
-      iconSetNode.children.forEach(iconNode => {
+      iconSetNode.children.forEach((iconNode) => {
         // 筛选数据 - 找到 COMPONENT
         if (iconNode.type === 'FRAME' || iconNode.type === 'COMPONENT') {
           let iconName = iconNode.name
@@ -35,7 +35,7 @@ export function getIcons(iconsCanvas: IFigmaCanvas): IIcons {
             svgName,
             id: iconNode.id,
             size: labelling.sizeFromFrameNodeName(iconSetNode.name), // 来自 Figma 的文件命名规范 ： Icons/48 -> :48
-            type: labelling.typeFromFrameNodeName(iconSetNode.name) // 来自 Figma 的文件命名规范 ： Icons/48 -> Icons
+            type: labelling.typeFromFrameNodeName(iconSetNode.name), // 来自 Figma 的文件命名规范 ： Icons/48 -> Icons
           }
         }
       })

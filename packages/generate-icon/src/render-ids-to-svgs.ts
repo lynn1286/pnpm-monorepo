@@ -1,10 +1,5 @@
-import {
-  CodedError,
-  ERRORS,
-  IFigmaConfig,
-  IFigmaFileImageResponse,
-  IIconsSvgUrls
-} from './types.js'
+import type { IFigmaConfig, IFigmaFileImageResponse, IIconsSvgUrls } from './types.js'
+import { CodedError, ERRORS } from './types.js'
 import { fetch } from './utils.js'
 
 /**
@@ -16,12 +11,12 @@ import { fetch } from './utils.js'
 export async function renderIdsToSvgs(ids: string[], config: IFigmaConfig): Promise<IIconsSvgUrls> {
   const url = `${config.baseUrl}/v1/images/${config.fileKey}?ids=${ids}&format=svg`
   const resp = await fetch(url, {
-    headers: config.headers
+    headers: config.headers,
   })
 
   let data: IFigmaFileImageResponse = {
     err: null,
-    images: {}
+    images: {},
   }
   if (resp.headers.get('content-type').includes('application/json')) {
     data = (await resp.json()) as IFigmaFileImageResponse

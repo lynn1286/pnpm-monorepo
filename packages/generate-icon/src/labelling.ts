@@ -1,5 +1,5 @@
 import * as path from 'path'
-import { IIcon } from './types.js'
+import type { IIcon } from './types.js'
 import * as _ from 'lodash-es'
 
 /**
@@ -24,5 +24,5 @@ export const labelling = {
   },
   addSizePrefix(size) {
     return `:${size.replace(/^(:?)(.*)/, '$2')}`
-  }
+  },
 }

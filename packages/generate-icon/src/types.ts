@@ -1,11 +1,11 @@
-import { Canvas, Document, FileImageResponse, FileResponse } from 'figma-js'
-import { Headers, RequestInit } from 'node-fetch'
+import type { Canvas, Document, FileImageResponse, FileResponse } from 'figma-js'
+import type { Headers, RequestInit } from 'node-fetch'
 
 export class CodedError extends Error {
   public code: ERRORS
   public hideStack: boolean
 
-  constructor(code: ERRORS, message: string, hideStack: boolean = false) {
+  constructor(code: ERRORS, message: string, hideStack = false) {
     super(message)
     this.code = code
     this.hideStack = hideStack
@@ -19,7 +19,7 @@ export enum ERRORS {
   UNEXPECTED = 'UNEXPECTED',
   NO_ICONS_PAGE = 'NO_ICONS_PAGE',
   NO_ICONS_IN_SETS = 'NO_ICONS_IN_SETS',
-  FIGMA_API = 'FIGMA_API'
+  FIGMA_API = 'FIGMA_API',
 }
 
 export interface IFigmaConfig {
@@ -74,8 +74,8 @@ interface ErrorResponse {
   readonly err?: string
   readonly status?: 400 | 403 | 404 | 429 | 500
 }
-export interface IFigmaCanvas extends Canvas {}
-export interface IFigmaDocument extends Document {}
+export type IFigmaCanvas = Canvas
+export type IFigmaDocument = Document
 export interface IFigmaFileImageResponse
   extends Omit<FileImageResponse, 'err' | 'status'>,
     ErrorResponse {}

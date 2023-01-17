@@ -1,7 +1,8 @@
 import React from 'react'
-import { render as inkRender, Box, Text, Static, Instance as InkInstance } from 'ink'
+import type { Instance as InkInstance } from 'ink'
+import { render as inkRender, Box, Text, Static } from 'ink'
 // import InkSpinner from 'ink-spinner' // 内部依赖有问题
-import { IDiffSummary } from './types.js'
+import type { IDiffSummary } from './types.js'
 
 interface ICliState {
   fileKey?: string
@@ -46,8 +47,8 @@ const CliView = ({ state }: ICliViewProps) => {
       {state.spinners && (
         <Box marginLeft={1} flexDirection="column">
           {state.spinners
-            .filter(entry => entry.success)
-            .map(entry => {
+            .filter((entry) => entry.success)
+            .map((entry) => {
               return (
                 <Text key={entry.text}>
                   <Text color="green">✓</Text> <Text>{entry.text}</Text>
@@ -55,8 +56,8 @@ const CliView = ({ state }: ICliViewProps) => {
               )
             })}
           {state.spinners
-            .filter(entry => !entry.success)
-            .map(entry => {
+            .filter((entry) => !entry.success)
+            .map((entry) => {
               return <Spinner key={entry.text} text={entry.text} />
             })}
         </Box>
@@ -74,10 +75,10 @@ const CliView = ({ state }: ICliViewProps) => {
 }
 
 const DiffView = ({ state }: ICliViewProps) => {
-  const statsWithChanges = state.diff.filter(stat => stat.additions > 0 || stat.deletions > 0)
+  const statsWithChanges = state.diff.filter((stat) => stat.additions > 0 || stat.deletions > 0)
   const totals = {
     additions: statsWithChanges.reduce((total, stat) => stat.additions + total, 0),
-    deletions: statsWithChanges.reduce((total, stat) => stat.deletions + total, 0)
+    deletions: statsWithChanges.reduce((total, stat) => stat.deletions + total, 0),
   }
   return (
     <Box>
@@ -86,14 +87,14 @@ const DiffView = ({ state }: ICliViewProps) => {
       </Box>
       <Box key="numstat-files" marginLeft={1} marginTop={1}>
         <Box flexDirection="column" flexGrow={0}>
-          {statsWithChanges.map(stat => (
+          {statsWithChanges.map((stat) => (
             <Text key={stat.filePath} dimColor>
               {stat.filePath}
             </Text>
           ))}
         </Box>
         <Box flexDirection="column" flexGrow={0} paddingLeft={1}>
-          {statsWithChanges.map(stat => (
+          {statsWithChanges.map((stat) => (
             <Text key={stat.filePath}>|</Text>
           ))}
         </Box>
@@ -104,12 +105,12 @@ const DiffView = ({ state }: ICliViewProps) => {
           flexGrow={0}
           paddingLeft={1}
         >
-          {statsWithChanges.map(stat => (
+          {statsWithChanges.map((stat) => (
             <Text key={stat.filePath}>{stat.additions + stat.deletions}</Text>
           ))}
         </Box>
         <Box flexDirection="column" paddingLeft={1}>
-          {statsWithChanges.map(stat => (
+          {statsWithChanges.map((stat) => (
             <Box key={stat.filePath}>
               {stat.status === 'D' && <Text color="red">Removed</Text>}
               {stat.status === 'A' && <Text color="green">New</Text>}

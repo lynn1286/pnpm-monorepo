@@ -1,5 +1,5 @@
 import { transformers } from './transformers.js'
-import { IIconManifest, IIcons, IIconsSvgUrls, ITemplateIcon } from './types.js'
+import type { IIconManifest, IIcons, IIconsSvgUrls, ITemplateIcon } from './types.js'
 import * as path from 'path'
 import { temporaryDirectory } from 'tempy'
 import { labelling } from './labelling.js'
@@ -17,9 +17,9 @@ import { fileURLToPath } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
-let currentTempDir = temporaryDirectory()
+const currentTempDir = temporaryDirectory()
 
-let currentListOfAddedFiles = []
+const currentListOfAddedFiles = []
 
 /**
  * @description: 下载 svgs 到临时目录
@@ -31,14 +31,14 @@ export async function downloadSvgsToFs(
   className?: string
 ) {
   await Promise.all(
-    Object.keys(urls).map(async iconId => {
+    Object.keys(urls).map(async (iconId) => {
       const processedSvg = await (
         await fetch(urls[iconId])
       )
         .text()
-        .then(async svgRaw => transformers.passSVGO(svgRaw, className))
-        .then(svgRaw => transformers.injectCurrentColor(svgRaw))
-        .then(svgRaw => transformers.prettify(svgRaw))
+        .then(async (svgRaw) => transformers.passSVGO(svgRaw, className))
+        .then((svgRaw) => transformers.injectCurrentColor(svgRaw))
+        .then((svgRaw) => transformers.prettify(svgRaw))
 
       const filePath = path.resolve(currentTempDir, labelling.filePathFromIcon(icons[iconId]))
       await outputFile(filePath, processedSvg, { encoding: 'utf8' })
@@ -65,14 +65,14 @@ export function filePathToSVGinJSXSync(filePath: string) {
  * @return {*}
  */
 export async function generateReactComponents(icons: IIcons) {
-  const getTemplateSource = templateFile =>
+  const getTemplateSource = (templateFile) =>
     readFile(path.resolve(__dirname, '../templates/', templateFile), {
-      encoding: 'utf8'
+      encoding: 'utf8',
     })
   const templates = {
     entry: await getTemplateSource('entry.tsx.ejs'),
     icon: await getTemplateSource('named-icon.tsx.ejs'),
-    types: await getTemplateSource('types.tsx')
+    types: await getTemplateSource('types.tsx'),
   }
   const firstIcon = Object.values(icons)[0]
   const iconsWithVariants = Object.values<ITemplateIcon>(
@@ -82,7 +82,7 @@ export async function generateReactComponents(icons: IIcons) {
         sizes: [],
         types: [],
         svgName: icons[iconId].svgName,
-        jsxName: icons[iconId].jsxName
+        jsxName: icons[iconId].jsxName,
       }
       icon.ids = _.uniq(icon.ids.concat(icons[iconId].id))
       icon.sizes = _.uniq(icon.sizes.concat(labelling.stripSizePrefix(icons[iconId].size)))
@@ -116,19 +116,19 @@ export async function generateReactComponents(icons: IIcons) {
         svgName: icon.svgName,
         jsxName: icon.jsxName,
         size,
-        type
+        type,
       })
       return filePathToSVGinJSXSync(filePath)
     },
     iconHasSizeAndType(icon: ITemplateIcon, size: string, type: string) {
-      return icon.ids.some(iconId => {
+      return icon.ids.some((iconId) => {
         const prefixedSize = labelling.addSizePrefix(size)
         return icons[iconId].size === prefixedSize && icons[iconId].type === type
       })
     },
     stripExtension(fileName) {
       return fileName.replace(/(.*)\.\w+$/, '$1')
-    }
+    },
   }
 
   const prettierOptions = prettier.resolveConfig.sync(process.cwd())
@@ -136,13 +136,13 @@ export async function generateReactComponents(icons: IIcons) {
   // 根据模版生成 React 组件
   for (const i in iconsWithVariants) {
     const icon = iconsWithVariants[i]
-    let iconSourceRaw = await ejs.render(templates.icon, {
+    const iconSourceRaw = await ejs.render(templates.icon, {
       icon,
-      ...templateHelpers
+      ...templateHelpers,
     })
     const iconSource = prettier.format(iconSourceRaw, {
       ...prettierOptions,
-      parser: 'typescript'
+      parser: 'typescript',
     })
     const iconComponentFilePath = path.resolve(
       currentTempDir,
@@ -154,13 +154,13 @@ export async function generateReactComponents(icons: IIcons) {
   }
 
   // 生成入口文件
-  let entrySourceRaw = await ejs.render(templates.entry, {
+  const entrySourceRaw = await ejs.render(templates.entry, {
     icons: iconsWithVariants,
-    ...templateHelpers
+    ...templateHelpers,
   })
   const entrySource = prettier.format(entrySourceRaw, {
     ...prettierOptions,
-    parser: 'typescript'
+    parser: 'typescript',
   })
   const entryFilePath = path.resolve(currentTempDir, FILE_PATH_ENTRY)
   await outputFile(entryFilePath, entrySource)
@@ -184,11 +184,11 @@ export async function generateIconManifest(icons: IIcons) {
   const prettierOptions = prettier.resolveConfig.sync(process.cwd())
   iconManifestRaw = prettier.format(iconManifestRaw, {
     ...prettierOptions,
-    parser: 'json'
+    parser: 'json',
   })
   const previousIconManifest = await getCurrentIconManifest()
   await writeFile(iconManifestFilePath, iconManifestRaw, {
-    encoding: 'utf8'
+    encoding: 'utf8',
   })
   currentListOfAddedFiles.push(iconManifestFilePath)
   return [previousIconManifest, iconManifest]
@@ -227,9 +227,9 @@ export async function getCurrentIconManifest(): Promise<IIconManifest> {
     gitRootDir,
     path.resolve(process.cwd(), FILE_PATH_MANIFEST)
   )
-  let { stdout: currentManifest } = await execa('git', [
+  const { stdout: currentManifest } = await execa('git', [
     'show',
-    `HEAD:${gitRelativePathToManifest}`
+    `HEAD:${gitRelativePathToManifest}`,
   ])
 
   return JSON.parse(currentManifest)
@@ -248,7 +248,7 @@ export async function swapGeneratedFiles(
   pushObjLeafNodesToArr(nextIconManifest, generatedFilePaths)
   generatedFilePaths = generatedFilePaths.concat([FILE_PATH_ENTRY, FILE_PATH_TYPES])
   const topLevelDirs: string[] = _.uniq(
-    generatedFilePaths.map(filePath => filePath.replace(/^([\w-]+).*/, '$1'))
+    generatedFilePaths.map((filePath) => filePath.replace(/^([\w-]+).*/, '$1'))
   )
   for (const i in topLevelDirs) {
     const topLevelDir = topLevelDirs[i]

@@ -1,4 +1,4 @@
-import { IDiffSummary } from './types.js'
+import type { IDiffSummary } from './types.js'
 import { execa } from 'execa'
 import * as path from 'path'
 
@@ -13,13 +13,13 @@ export async function getGitCustomDiff(touchedPaths): Promise<IDiffSummary[]> {
 
   const [{ stdout: numstatRaw }, { stdout: nameStatRaw }] = await Promise.all([
     execa('git', ['diff', '--numstat', '--no-renames', '--', process.cwd()]),
-    execa('git', ['diff', '--name-status', '--no-renames', '--', process.cwd()])
+    execa('git', ['diff', '--name-status', '--no-renames', '--', process.cwd()]),
   ])
 
-  const nameStat = nameStatRaw.split('\n').map(line => line[0])
+  const nameStat = nameStatRaw.split('\n').map((line) => line[0])
   const diffSummaries: IDiffSummary[] = numstatRaw
     .split('\n')
-    .map(line => line.split('\t'))
+    .map((line) => line.split('\t'))
     .map(([additions, deletions, filePath], i) => {
       const filePathFromCwd = filePath
         .replace(path.relative(gitRootDir, process.cwd()), '')
@@ -30,7 +30,7 @@ export async function getGitCustomDiff(touchedPaths): Promise<IDiffSummary[]> {
         additions: parseInt(additions, 10),
         deletions: parseInt(deletions, 10),
         filePath: filePathFromCwd,
-        fullFilePath: filePath
+        fullFilePath: filePath,
       }
     })
 
