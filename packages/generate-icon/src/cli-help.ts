@@ -21,13 +21,13 @@ export const cliHelp = async () => {
       flags: {
         file: {
           type: 'string',
-          alias: 'f'
+          alias: 'f',
         },
         className: {
           type: 'string',
-          alias: 'c'
-        }
-      }
+          alias: 'c',
+        },
+      },
     }
   )
 
@@ -37,6 +37,6 @@ export const cliHelp = async () => {
 
   return {
     file: cli.flags.file,
-    className: cli.flags.className
+    className: cli.flags.className,
   }
 }

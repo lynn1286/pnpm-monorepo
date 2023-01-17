@@ -1,2 +1,4 @@
 *.ejs
 node_modules
+packages/generate-icon/lib
+packages/website/public

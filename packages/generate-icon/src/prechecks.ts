@@ -16,7 +16,7 @@ export async function prechecks() {
 
   const [{ stdout: trackedFiles }, { stdout: untrackedFiles }] = await Promise.all([
     execa('git', ['diff-index', 'HEAD', '--', process.cwd()]),
-    execa('git', ['ls-files', '--others', '--exclude-standard', process.cwd()])
+    execa('git', ['ls-files', '--others', '--exclude-standard', process.cwd()]),
   ])
 
   if (trackedFiles.length > 0 || untrackedFiles.length > 0) {
@@ -37,7 +37,7 @@ export async function prechecks() {
       'git',
       ['status', '--no-renames', '--untracked-files', '--short', '--', process.cwd()],
       {
-        stdio: 'inherit'
+        stdio: 'inherit',
       }
     )
     process.exit(1)

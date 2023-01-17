@@ -10,7 +10,7 @@ import {
   downloadSvgsToFs,
   generateIconManifest,
   generateReactComponents,
-  swapGeneratedFiles
+  swapGeneratedFiles,
 } from './download-svgs-to-fs.js'
 import { getFigmaDocument } from './get-figma-document.js'
 import { getGitCustomDiff } from './get-git-custom-diff.js'
@@ -27,7 +27,7 @@ import * as dotenv from 'dotenv'
 const main = async () => {
   // 设置环境变量
   dotenv.config({
-    path: path.resolve(process.cwd(), '.env')
+    path: path.resolve(process.cwd(), '.env'),
   })
 
   await prechecks()
@@ -38,14 +38,14 @@ const main = async () => {
 
   /* 1. 请求 figma , 获取所有文档 */
   render({
-    spinners: [{ text: '正在从 Figma 中获取文档 🤯...' }]
+    spinners: [{ text: '正在从 Figma 中获取文档 🤯...' }],
   })
   const document = await getFigmaDocument(figmaConfig)
   render({
     spinners: [
       { success: true, text: '成功获取到 Figma 文档, 即将进入下一步 ✨' },
-      { text: '正在查找 Figma 文档中的所有 Icon...' }
-    ]
+      { text: '正在查找 Figma 文档中的所有 Icon...' },
+    ],
   })
 
   /* 2. 遍历查找 Icons 对象   */
@@ -69,7 +69,7 @@ const main = async () => {
 
   /* 4. 根据 icon id 得到 svg url */
   render({
-    spinners: [{ text: '根据 icon id 得到 svg url...' }]
+    spinners: [{ text: '根据 icon id 得到 svg url...' }],
   })
   const iconSvgUrls = await renderIdsToSvgs(iconIds, figmaConfig)
 
@@ -78,13 +78,13 @@ const main = async () => {
     spinners: [
       {
         success: true,
-        text: '准备下载 svg 文件...'
-      }
+        text: '准备下载 svg 文件...',
+      },
     ],
     progress: {
       text: '当前进度...',
-      percent: 0
-    }
+      percent: 0,
+    },
   })
   let downloadsCompleted = 0
   await downloadSvgsToFs(
@@ -95,8 +95,8 @@ const main = async () => {
       render({
         progress: {
           text: '当前进度...',
-          percent: downloadsCompleted / iconIds.length
-        }
+          percent: downloadsCompleted / iconIds.length,
+        },
       })
     },
     cliParams.className
@@ -105,12 +105,12 @@ const main = async () => {
     spinners: [
       {
         success: true,
-        text: '文件下载成功 👏'
+        text: '文件下载成功 👏',
       },
       {
-        text: '即将创建 React 组件...'
-      }
-    ]
+        text: '即将创建 React 组件...',
+      },
+    ],
   })
 
   /* 6. 生成 React 组件 */
@@ -119,12 +119,12 @@ const main = async () => {
     spinners: [
       {
         success: true,
-        text: 'React 组件创建成功 ⚛️ '
+        text: 'React 组件创建成功 ⚛️ ',
       },
       {
-        text: '即将创建 Manifest 文件...'
-      }
-    ]
+        text: '即将创建 Manifest 文件...',
+      },
+    ],
   })
 
   /* 6. 创建 Manifest */
@@ -133,12 +133,12 @@ const main = async () => {
     spinners: [
       {
         success: true,
-        text: '创建 Manifest 成功 📓 🔥'
+        text: '创建 Manifest 成功 📓 🔥',
       },
       {
-        text: '写入 Manifest 文件...'
-      }
-    ]
+        text: '写入 Manifest 文件...',
+      },
+    ],
   })
 
   /* 7. 生成文件. */
@@ -147,15 +147,15 @@ const main = async () => {
     spinners: [
       {
         success: true,
-        text: '对工作目录应用更改 💇‍'
-      }
-    ]
+        text: '对工作目录应用更改 💇‍',
+      },
+    ],
   })
 
   /* 8. 输入 git 差异. */
   try {
     render({
-      diff: await getGitCustomDiff(touchedPaths)
+      diff: await getGitCustomDiff(touchedPaths),
     })
   } catch (err) {}
 
@@ -166,6 +166,6 @@ main()
   .then(() => {
     console.log('\n 图标构建成功 🎉')
   })
-  .catch(err => handleError(err))
+  .catch((err) => handleError(err))
 
-process.addListener('unhandledRejection', err => handleError(err))
+process.addListener('unhandledRejection', (err) => handleError(err))

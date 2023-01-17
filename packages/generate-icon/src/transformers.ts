@@ -20,7 +20,7 @@ export const transformers = {
   injectCurrentColor(svgRaw: string) {
     const $ = cheerio.load(svgRaw, { xmlMode: true })
     $('*').each((i, el: any) => {
-      Object.keys(el.attribs).forEach(attrKey => {
+      Object.keys(el.attribs).forEach((attrKey) => {
         if (['fill', 'stroke'].includes(attrKey)) {
           const val = $(el).attr(attrKey)
           if (val !== 'none') {
@@ -47,7 +47,7 @@ export const transformers = {
   readyForJSX(svgRaw: string) {
     const $ = cheerio.load(svgRaw, { xmlMode: true })
     $('*').each((i, el: any) => {
-      Object.keys(el.attribs).forEach(attrKey => {
+      Object.keys(el.attribs).forEach((attrKey) => {
         if (attrKey.includes('-')) {
           $(el).attr(_.camelCase(attrKey), el.attribs[attrKey]).removeAttr(attrKey)
         }
@@ -65,5 +65,5 @@ export const transformers = {
       .replace(/fill=['|"]currentColor['|"]/g, 'fill={color}')
       .replace('props="..."', '{...props}')
       .replace('ref="forwardedRef"', 'ref={forwardedRef}')
-  }
+  },
 }
