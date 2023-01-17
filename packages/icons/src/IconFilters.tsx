@@ -25,4 +25,5 @@ export const IconFilters = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconFilters.displayName = IconFiltersProps
 export default IconFilters

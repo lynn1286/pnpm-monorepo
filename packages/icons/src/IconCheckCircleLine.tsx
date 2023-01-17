@@ -25,4 +25,5 @@ export const IconCheckCircleLine = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconCheckCircleLine.displayName = IconCheckCircleLineProps
 export default IconCheckCircleLine

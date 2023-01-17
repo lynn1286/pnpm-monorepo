@@ -25,4 +25,5 @@ export const IconDownload = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconDownload.displayName = IconDownloadProps
 export default IconDownload

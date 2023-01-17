@@ -25,4 +25,5 @@ export const IconSkinAdd = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconSkinAdd.displayName = IconSkinAddProps
 export default IconSkinAdd

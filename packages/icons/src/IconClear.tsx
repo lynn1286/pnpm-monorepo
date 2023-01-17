@@ -31,4 +31,5 @@ export const IconClear = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconClear.displayName = IconClearProps
 export default IconClear

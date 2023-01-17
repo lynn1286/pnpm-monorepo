@@ -25,4 +25,5 @@ export const IconDelete = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconDelete.displayName = IconDeleteProps
 export default IconDelete

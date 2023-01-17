@@ -26,4 +26,5 @@ export const IconComputer = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconComputer.displayName = IconComputerProps
 export default IconComputer

@@ -29,4 +29,5 @@ export const IconFlipVertically = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconFlipVertically.displayName = IconFlipVerticallyProps
 export default IconFlipVertically

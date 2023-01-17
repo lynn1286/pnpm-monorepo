@@ -31,4 +31,5 @@ export const IconTailoring = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconTailoring.displayName = IconTailoringProps
 export default IconTailoring

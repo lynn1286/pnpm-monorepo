@@ -27,4 +27,5 @@ export const IconFacebook = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconFacebook.displayName = IconFacebookProps
 export default IconFacebook

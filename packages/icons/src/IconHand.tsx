@@ -25,4 +25,5 @@ export const IconHand = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconHand.displayName = IconHandProps
 export default IconHand

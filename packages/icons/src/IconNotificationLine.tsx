@@ -25,4 +25,5 @@ export const IconNotificationLine = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconNotificationLine.displayName = IconNotificationLineProps
 export default IconNotificationLine

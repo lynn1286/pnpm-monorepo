@@ -25,4 +25,5 @@ export const IconAttributeW = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconAttributeW.displayName = IconAttributeWProps
 export default IconAttributeW

@@ -25,4 +25,5 @@ export const IconQuestionCircleLine = React.forwardRef<SVGSVGElement, IconProps>
   }
 )
 
+IconQuestionCircleLine.displayName = IconQuestionCircleLineProps
 export default IconQuestionCircleLine

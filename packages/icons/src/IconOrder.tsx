@@ -25,4 +25,5 @@ export const IconOrder = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconOrder.displayName = IconOrderProps
 export default IconOrder

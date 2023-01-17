@@ -29,4 +29,5 @@ export const IconAlignCenterVertically = React.forwardRef<SVGSVGElement, IconPro
   }
 )
 
+IconAlignCenterVertically.displayName = IconAlignCenterVerticallyProps
 export default IconAlignCenterVertically

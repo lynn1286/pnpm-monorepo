@@ -32,4 +32,5 @@ export const IconUploadText = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconUploadText.displayName = IconUploadTextProps
 export default IconUploadText

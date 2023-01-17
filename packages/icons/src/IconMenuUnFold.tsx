@@ -25,4 +25,5 @@ export const IconMenuUnFold = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconMenuUnFold.displayName = IconMenuUnFoldProps
 export default IconMenuUnFold

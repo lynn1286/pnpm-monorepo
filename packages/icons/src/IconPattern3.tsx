@@ -25,4 +25,5 @@ export const IconPattern3 = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconPattern3.displayName = IconPattern3Props
 export default IconPattern3

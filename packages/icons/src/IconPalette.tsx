@@ -25,4 +25,5 @@ export const IconPalette = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconPalette.displayName = IconPaletteProps
 export default IconPalette

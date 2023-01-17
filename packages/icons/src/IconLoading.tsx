@@ -23,4 +23,5 @@ export const IconLoading = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconLoading.displayName = IconLoadingProps
 export default IconLoading

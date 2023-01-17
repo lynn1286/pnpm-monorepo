@@ -25,4 +25,5 @@ export const IconHeartLine = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconHeartLine.displayName = IconHeartLineProps
 export default IconHeartLine

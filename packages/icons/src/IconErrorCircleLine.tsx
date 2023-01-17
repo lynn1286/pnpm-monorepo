@@ -25,4 +25,5 @@ export const IconErrorCircleLine = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconErrorCircleLine.displayName = IconErrorCircleLineProps
 export default IconErrorCircleLine

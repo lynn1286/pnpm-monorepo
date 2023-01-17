@@ -32,4 +32,5 @@ export const IconMirrorHorizontal = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconMirrorHorizontal.displayName = IconMirrorHorizontalProps
 export default IconMirrorHorizontal

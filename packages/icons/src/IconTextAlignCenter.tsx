@@ -25,4 +25,5 @@ export const IconTextAlignCenter = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconTextAlignCenter.displayName = IconTextAlignCenterProps
 export default IconTextAlignCenter

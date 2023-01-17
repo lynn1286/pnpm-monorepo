@@ -25,4 +25,5 @@ export const IconQuestionCircleFill = React.forwardRef<SVGSVGElement, IconProps>
   }
 )
 
+IconQuestionCircleFill.displayName = IconQuestionCircleFillProps
 export default IconQuestionCircleFill

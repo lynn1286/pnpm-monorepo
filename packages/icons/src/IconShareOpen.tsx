@@ -25,4 +25,5 @@ export const IconShareOpen = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconShareOpen.displayName = IconShareOpenProps
 export default IconShareOpen

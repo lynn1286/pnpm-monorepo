@@ -25,4 +25,5 @@ export const IconProgress0 = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconProgress0.displayName = IconProgress0Props
 export default IconProgress0

@@ -27,4 +27,5 @@ export const IconAttributeOpacity = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconAttributeOpacity.displayName = IconAttributeOpacityProps
 export default IconAttributeOpacity

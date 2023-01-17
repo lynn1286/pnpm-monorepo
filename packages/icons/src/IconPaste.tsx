@@ -25,4 +25,5 @@ export const IconPaste = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconPaste.displayName = IconPasteProps
 export default IconPaste

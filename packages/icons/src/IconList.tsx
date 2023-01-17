@@ -25,4 +25,5 @@ export const IconList = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconList.displayName = IconListProps
 export default IconList

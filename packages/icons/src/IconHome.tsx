@@ -25,4 +25,5 @@ export const IconHome = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconHome.displayName = IconHomeProps
 export default IconHome

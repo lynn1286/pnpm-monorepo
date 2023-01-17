@@ -25,4 +25,5 @@ export const IconRetryCircle = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconRetryCircle.displayName = IconRetryCircleProps
 export default IconRetryCircle

@@ -25,4 +25,5 @@ export const IconCopy = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconCopy.displayName = IconCopyProps
 export default IconCopy

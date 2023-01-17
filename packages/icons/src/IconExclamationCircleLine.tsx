@@ -25,4 +25,5 @@ export const IconExclamationCircleLine = React.forwardRef<SVGSVGElement, IconPro
   }
 )
 
+IconExclamationCircleLine.displayName = IconExclamationCircleLineProps
 export default IconExclamationCircleLine

@@ -25,4 +25,5 @@ export const IconLanguage = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconLanguage.displayName = IconLanguageProps
 export default IconLanguage

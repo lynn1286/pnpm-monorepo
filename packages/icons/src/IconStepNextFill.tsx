@@ -23,4 +23,5 @@ export const IconStepNextFill = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconStepNextFill.displayName = IconStepNextFillProps
 export default IconStepNextFill

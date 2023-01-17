@@ -25,4 +25,5 @@ export const IconTextUnderline = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconTextUnderline.displayName = IconTextUnderlineProps
 export default IconTextUnderline

@@ -55,4 +55,5 @@ export const IconInstagram = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconInstagram.displayName = IconInstagramProps
 export default IconInstagram

@@ -23,4 +23,5 @@ export const IconRightBold = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconRightBold.displayName = IconRightBoldProps
 export default IconRightBold

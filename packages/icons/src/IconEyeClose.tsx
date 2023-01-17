@@ -25,4 +25,5 @@ export const IconEyeClose = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconEyeClose.displayName = IconEyeCloseProps
 export default IconEyeClose

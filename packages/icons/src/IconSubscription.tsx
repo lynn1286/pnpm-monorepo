@@ -25,4 +25,5 @@ export const IconSubscription = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconSubscription.displayName = IconSubscriptionProps
 export default IconSubscription

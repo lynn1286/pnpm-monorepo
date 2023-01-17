@@ -25,4 +25,5 @@ export const IconDragHorizontally = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconDragHorizontally.displayName = IconDragHorizontallyProps
 export default IconDragHorizontally

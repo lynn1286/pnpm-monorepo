@@ -43,4 +43,5 @@ export const IconGoogledrive = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconGoogledrive.displayName = IconGoogledriveProps
 export default IconGoogledrive

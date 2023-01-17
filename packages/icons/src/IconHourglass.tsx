@@ -37,4 +37,5 @@ export const IconHourglass = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconHourglass.displayName = IconHourglassProps
 export default IconHourglass

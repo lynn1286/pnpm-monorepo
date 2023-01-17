@@ -25,4 +25,5 @@ export const IconLocation = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconLocation.displayName = IconLocationProps
 export default IconLocation

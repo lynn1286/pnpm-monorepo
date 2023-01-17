@@ -29,4 +29,5 @@ export const IconAlignTop = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconAlignTop.displayName = IconAlignTopProps
 export default IconAlignTop

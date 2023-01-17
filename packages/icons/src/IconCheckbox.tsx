@@ -25,4 +25,5 @@ export const IconCheckbox = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconCheckbox.displayName = IconCheckboxProps
 export default IconCheckbox

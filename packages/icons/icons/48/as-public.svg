@@ -6,12 +6,7 @@
   xmlns="http://www.w3.org/2000/svg"
   class="mm-icon"
 >
-  <path
-    fill-rule="evenodd"
-    clip-rule="evenodd"
-    d="M42 42H5.99999V38H42V42Z"
-    fill="currentColor"
-  />
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M42 42H5.99999V38H42V42Z" fill="currentColor" />
   <path
     fill-rule="evenodd"
     clip-rule="evenodd"

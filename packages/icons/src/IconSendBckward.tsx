@@ -32,4 +32,5 @@ export const IconSendBckward = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconSendBckward.displayName = IconSendBckwardProps
 export default IconSendBckward

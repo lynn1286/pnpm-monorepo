@@ -25,4 +25,5 @@ export const IconDrag = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconDrag.displayName = IconDragProps
 export default IconDrag

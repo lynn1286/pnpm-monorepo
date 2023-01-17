@@ -25,4 +25,5 @@ export const IconTextOrderedList = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconTextOrderedList.displayName = IconTextOrderedListProps
 export default IconTextOrderedList

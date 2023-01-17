@@ -32,4 +32,5 @@ export const IconAsPublic = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconAsPublic.displayName = IconAsPublicProps
 export default IconAsPublic

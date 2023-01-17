@@ -6,8 +6,5 @@
   xmlns="http://www.w3.org/2000/svg"
   class="mm-icon"
 >
-  <path
-    d="M35 7V11H28.639L23.439 37H30V41H13V37H19.359L24.559 11H18V7H35Z"
-    fill="currentColor"
-  />
+  <path d="M35 7V11H28.639L23.439 37H30V41H13V37H19.359L24.559 11H18V7H35Z" fill="currentColor" />
 </svg>

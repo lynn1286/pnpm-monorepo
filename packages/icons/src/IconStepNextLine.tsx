@@ -25,4 +25,5 @@ export const IconStepNextLine = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconStepNextLine.displayName = IconStepNextLineProps
 export default IconStepNextLine

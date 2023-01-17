@@ -29,4 +29,5 @@ export const IconAlignBottom = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconAlignBottom.displayName = IconAlignBottomProps
 export default IconAlignBottom

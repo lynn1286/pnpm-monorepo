@@ -12,12 +12,7 @@
     d="M32.0395 12.5095L25.3336 6.50952C24.5661 5.8228 23.4026 5.83119 22.6451 6.52891L16.1308 12.5289L18.8407 15.4711L24.0195 10.7011L29.3723 15.4905L32.0395 12.5095Z"
     fill="currentColor"
   />
-  <path
-    fill-rule="evenodd"
-    clip-rule="evenodd"
-    d="M26 29V10H22V29H26Z"
-    fill="currentColor"
-  />
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M26 29V10H22V29H26Z" fill="currentColor" />
   <path
     fill-rule="evenodd"
     clip-rule="evenodd"

@@ -25,4 +25,5 @@ export const IconSettings = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
+IconSettings.displayName = IconSettingsProps
 export default IconSettings
