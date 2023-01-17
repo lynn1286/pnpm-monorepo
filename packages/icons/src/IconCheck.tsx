@@ -23,5 +23,6 @@ export const IconCheck = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconCheck.displayName = IconCheckProps
+IconCheck.displayName = 'IconCheck'
+
 export default IconCheck

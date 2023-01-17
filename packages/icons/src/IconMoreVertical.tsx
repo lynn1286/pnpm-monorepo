@@ -25,5 +25,6 @@ export const IconMoreVertical = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconMoreVertical.displayName = IconMoreVerticalProps
+IconMoreVertical.displayName = 'IconMoreVertical'
+
 export default IconMoreVertical

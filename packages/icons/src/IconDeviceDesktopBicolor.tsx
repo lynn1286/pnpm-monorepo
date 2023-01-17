@@ -30,5 +30,6 @@ export const IconDeviceDesktopBicolor = React.forwardRef<SVGSVGElement, IconProp
   }
 )
 
-IconDeviceDesktopBicolor.displayName = IconDeviceDesktopBicolorProps
+IconDeviceDesktopBicolor.displayName = 'IconDeviceDesktopBicolor'
+
 export default IconDeviceDesktopBicolor

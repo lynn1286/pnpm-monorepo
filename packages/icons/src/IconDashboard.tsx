@@ -25,5 +25,6 @@ export const IconDashboard = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconDashboard.displayName = IconDashboardProps
+IconDashboard.displayName = 'IconDashboard'
+
 export default IconDashboard

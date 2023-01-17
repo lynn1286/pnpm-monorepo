@@ -23,5 +23,6 @@ export const IconUp = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconUp.displayName = IconUpProps
+IconUp.displayName = 'IconUp'
+
 export default IconUp

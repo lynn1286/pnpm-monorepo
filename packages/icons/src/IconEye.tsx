@@ -25,5 +25,6 @@ export const IconEye = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconEye.displayName = IconEyeProps
+IconEye.displayName = 'IconEye'
+
 export default IconEye

@@ -23,5 +23,6 @@ export const IconHeartFill = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconHeartFill.displayName = IconHeartFillProps
+IconHeartFill.displayName = 'IconHeartFill'
+
 export default IconHeartFill

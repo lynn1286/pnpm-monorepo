@@ -32,5 +32,6 @@ export const IconBringForward = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconBringForward.displayName = IconBringForwardProps
+IconBringForward.displayName = 'IconBringForward'
+
 export default IconBringForward

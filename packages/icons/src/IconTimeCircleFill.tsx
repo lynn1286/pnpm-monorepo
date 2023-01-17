@@ -25,5 +25,6 @@ export const IconTimeCircleFill = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconTimeCircleFill.displayName = IconTimeCircleFillProps
+IconTimeCircleFill.displayName = 'IconTimeCircleFill'
+
 export default IconTimeCircleFill

@@ -31,5 +31,6 @@ export const IconImageError = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconImageError.displayName = IconImageErrorProps
+IconImageError.displayName = 'IconImageError'
+
 export default IconImageError

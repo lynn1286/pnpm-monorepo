@@ -25,5 +25,6 @@ export const IconExclamationCircleFill = React.forwardRef<SVGSVGElement, IconPro
   }
 )
 
-IconExclamationCircleFill.displayName = IconExclamationCircleFillProps
+IconExclamationCircleFill.displayName = 'IconExclamationCircleFill'
+
 export default IconExclamationCircleFill

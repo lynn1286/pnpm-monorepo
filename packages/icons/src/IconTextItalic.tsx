@@ -20,5 +20,6 @@ export const IconTextItalic = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconTextItalic.displayName = IconTextItalicProps
+IconTextItalic.displayName = 'IconTextItalic'
+
 export default IconTextItalic

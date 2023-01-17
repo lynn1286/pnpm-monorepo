@@ -25,5 +25,6 @@ export const IconPen = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconPen.displayName = IconPenProps
+IconPen.displayName = 'IconPen'
+
 export default IconPen

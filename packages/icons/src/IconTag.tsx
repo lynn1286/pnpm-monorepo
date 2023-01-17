@@ -25,5 +25,6 @@ export const IconTag = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconTag.displayName = IconTagProps
+IconTag.displayName = 'IconTag'
+
 export default IconTag

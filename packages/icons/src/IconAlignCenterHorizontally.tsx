@@ -29,5 +29,6 @@ export const IconAlignCenterHorizontally = React.forwardRef<SVGSVGElement, IconP
   }
 )
 
-IconAlignCenterHorizontally.displayName = IconAlignCenterHorizontallyProps
+IconAlignCenterHorizontally.displayName = 'IconAlignCenterHorizontally'
+
 export default IconAlignCenterHorizontally

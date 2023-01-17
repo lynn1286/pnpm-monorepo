@@ -25,5 +25,6 @@ export const IconBilling = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconBilling.displayName = IconBillingProps
+IconBilling.displayName = 'IconBilling'
+
 export default IconBilling

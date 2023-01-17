@@ -25,5 +25,6 @@ export const IconEarth = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconEarth.displayName = IconEarthProps
+IconEarth.displayName = 'IconEarth'
+
 export default IconEarth

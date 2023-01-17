@@ -25,5 +25,6 @@ export const IconMenu = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconMenu.displayName = IconMenuProps
+IconMenu.displayName = 'IconMenu'
+
 export default IconMenu

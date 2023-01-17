@@ -43,5 +43,6 @@ export const IconBringToFront = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconBringToFront.displayName = IconBringToFrontProps
+IconBringToFront.displayName = 'IconBringToFront'
+
 export default IconBringToFront

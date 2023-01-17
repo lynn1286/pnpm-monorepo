@@ -31,5 +31,6 @@ export const IconZoomIn = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconZoomIn.displayName = IconZoomInProps
+IconZoomIn.displayName = 'IconZoomIn'
+
 export default IconZoomIn

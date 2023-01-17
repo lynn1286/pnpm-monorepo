@@ -25,5 +25,6 @@ export const IconPuzzle = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconPuzzle.displayName = IconPuzzleProps
+IconPuzzle.displayName = 'IconPuzzle'
+
 export default IconPuzzle

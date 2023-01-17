@@ -25,5 +25,6 @@ export const IconPlusCircleLine = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconPlusCircleLine.displayName = IconPlusCircleLineProps
+IconPlusCircleLine.displayName = 'IconPlusCircleLine'
+
 export default IconPlusCircleLine

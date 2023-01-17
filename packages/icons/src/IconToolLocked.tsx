@@ -25,5 +25,6 @@ export const IconToolLocked = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconToolLocked.displayName = IconToolLockedProps
+IconToolLocked.displayName = 'IconToolLocked'
+
 export default IconToolLocked

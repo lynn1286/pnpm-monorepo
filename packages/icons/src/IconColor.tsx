@@ -51,5 +51,6 @@ export const IconColor = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconColor.displayName = IconColorProps
+IconColor.displayName = 'IconColor'
+
 export default IconColor

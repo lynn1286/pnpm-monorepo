@@ -26,5 +26,6 @@ export const IconFeedback = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconFeedback.displayName = IconFeedbackProps
+IconFeedback.displayName = 'IconFeedback'
+
 export default IconFeedback

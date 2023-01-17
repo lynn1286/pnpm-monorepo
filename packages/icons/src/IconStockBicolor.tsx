@@ -32,5 +32,6 @@ export const IconStockBicolor = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconStockBicolor.displayName = IconStockBicolorProps
+IconStockBicolor.displayName = 'IconStockBicolor'
+
 export default IconStockBicolor

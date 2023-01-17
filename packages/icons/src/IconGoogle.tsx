@@ -35,5 +35,6 @@ export const IconGoogle = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconGoogle.displayName = IconGoogleProps
+IconGoogle.displayName = 'IconGoogle'
+
 export default IconGoogle

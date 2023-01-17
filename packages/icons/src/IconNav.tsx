@@ -25,5 +25,6 @@ export const IconNav = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconNav.displayName = IconNavProps
+IconNav.displayName = 'IconNav'
+
 export default IconNav

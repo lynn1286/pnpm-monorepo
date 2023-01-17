@@ -25,5 +25,6 @@ export const IconStoreImport = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconStoreImport.displayName = IconStoreImportProps
+IconStoreImport.displayName = 'IconStoreImport'
+
 export default IconStoreImport

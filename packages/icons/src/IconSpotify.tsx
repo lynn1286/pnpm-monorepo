@@ -23,5 +23,6 @@ export const IconSpotify = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconSpotify.displayName = IconSpotifyProps
+IconSpotify.displayName = 'IconSpotify'
+
 export default IconSpotify

@@ -25,5 +25,6 @@ export const IconQuit = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconQuit.displayName = IconQuitProps
+IconQuit.displayName = 'IconQuit'
+
 export default IconQuit

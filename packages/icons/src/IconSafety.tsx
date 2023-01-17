@@ -25,5 +25,6 @@ export const IconSafety = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconSafety.displayName = IconSafetyProps
+IconSafety.displayName = 'IconSafety'
+
 export default IconSafety

@@ -25,5 +25,6 @@ export const IconCurrency = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconCurrency.displayName = IconCurrencyProps
+IconCurrency.displayName = 'IconCurrency'
+
 export default IconCurrency

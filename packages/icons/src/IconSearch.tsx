@@ -25,5 +25,6 @@ export const IconSearch = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconSearch.displayName = IconSearchProps
+IconSearch.displayName = 'IconSearch'
+
 export default IconSearch

@@ -26,5 +26,6 @@ export const IconMobile = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconMobile.displayName = IconMobileProps
+IconMobile.displayName = 'IconMobile'
+
 export default IconMobile

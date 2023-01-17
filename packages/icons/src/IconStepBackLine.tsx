@@ -25,5 +25,6 @@ export const IconStepBackLine = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconStepBackLine.displayName = IconStepBackLineProps
+IconStepBackLine.displayName = 'IconStepBackLine'
+
 export default IconStepBackLine

@@ -25,5 +25,6 @@ export const IconTextBold = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconTextBold.displayName = IconTextBoldProps
+IconTextBold.displayName = 'IconTextBold'
+
 export default IconTextBold

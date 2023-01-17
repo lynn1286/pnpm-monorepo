@@ -25,5 +25,6 @@ export const IconThunbsDown = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconThunbsDown.displayName = IconThunbsDownProps
+IconThunbsDown.displayName = 'IconThunbsDown'
+
 export default IconThunbsDown

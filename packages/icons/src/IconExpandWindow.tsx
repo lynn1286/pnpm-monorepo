@@ -25,5 +25,6 @@ export const IconExpandWindow = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconExpandWindow.displayName = IconExpandWindowProps
+IconExpandWindow.displayName = 'IconExpandWindow'
+
 export default IconExpandWindow

@@ -25,5 +25,6 @@ export const IconSwap = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconSwap.displayName = IconSwapProps
+IconSwap.displayName = 'IconSwap'
+
 export default IconSwap

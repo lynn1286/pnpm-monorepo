@@ -25,5 +25,6 @@ export const IconAiRecognition = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconAiRecognition.displayName = IconAiRecognitionProps
+IconAiRecognition.displayName = 'IconAiRecognition'
+
 export default IconAiRecognition

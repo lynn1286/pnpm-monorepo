@@ -31,5 +31,6 @@ export const IconCornerLeftUp = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconCornerLeftUp.displayName = IconCornerLeftUpProps
+IconCornerLeftUp.displayName = 'IconCornerLeftUp'
+
 export default IconCornerLeftUp

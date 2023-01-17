@@ -25,5 +25,6 @@ export const IconLeftCaret = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconLeftCaret.displayName = IconLeftCaretProps
+IconLeftCaret.displayName = 'IconLeftCaret'
+
 export default IconLeftCaret

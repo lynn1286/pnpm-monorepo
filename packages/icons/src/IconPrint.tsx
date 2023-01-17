@@ -25,5 +25,6 @@ export const IconPrint = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconPrint.displayName = IconPrintProps
+IconPrint.displayName = 'IconPrint'
+
 export default IconPrint

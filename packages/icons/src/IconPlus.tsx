@@ -20,5 +20,6 @@ export const IconPlus = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconPlus.displayName = IconPlusProps
+IconPlus.displayName = 'IconPlus'
+
 export default IconPlus

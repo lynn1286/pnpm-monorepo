@@ -35,5 +35,6 @@ export const IconVerification = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconVerification.displayName = IconVerificationProps
+IconVerification.displayName = 'IconVerification'
+
 export default IconVerification

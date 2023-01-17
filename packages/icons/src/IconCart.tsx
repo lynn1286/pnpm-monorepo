@@ -25,5 +25,6 @@ export const IconCart = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconCart.displayName = IconCartProps
+IconCart.displayName = 'IconCart'
+
 export default IconCart

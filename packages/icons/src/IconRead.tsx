@@ -29,5 +29,6 @@ export const IconRead = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconRead.displayName = IconReadProps
+IconRead.displayName = 'IconRead'
+
 export default IconRead

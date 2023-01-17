@@ -20,5 +20,6 @@ export const IconMinus = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconMinus.displayName = IconMinusProps
+IconMinus.displayName = 'IconMinus'
+
 export default IconMinus

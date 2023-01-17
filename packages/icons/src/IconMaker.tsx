@@ -25,5 +25,6 @@ export const IconMaker = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconMaker.displayName = IconMakerProps
+IconMaker.displayName = 'IconMaker'
+
 export default IconMaker

@@ -40,5 +40,6 @@ export const IconCanva = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconCanva.displayName = IconCanvaProps
+IconCanva.displayName = 'IconCanva'
+
 export default IconCanva

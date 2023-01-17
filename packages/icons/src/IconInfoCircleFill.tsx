@@ -25,5 +25,6 @@ export const IconInfoCircleFill = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconInfoCircleFill.displayName = IconInfoCircleFillProps
+IconInfoCircleFill.displayName = 'IconInfoCircleFill'
+
 export default IconInfoCircleFill

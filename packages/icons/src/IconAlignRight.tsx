@@ -29,5 +29,6 @@ export const IconAlignRight = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconAlignRight.displayName = IconAlignRightProps
+IconAlignRight.displayName = 'IconAlignRight'
+
 export default IconAlignRight

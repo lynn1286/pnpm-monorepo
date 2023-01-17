@@ -23,5 +23,6 @@ export const IconNotificationFill = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconNotificationFill.displayName = IconNotificationFillProps
+IconNotificationFill.displayName = 'IconNotificationFill'
+
 export default IconNotificationFill

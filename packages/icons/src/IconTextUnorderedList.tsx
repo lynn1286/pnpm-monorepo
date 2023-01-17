@@ -25,5 +25,6 @@ export const IconTextUnorderedList = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconTextUnorderedList.displayName = IconTextUnorderedListProps
+IconTextUnorderedList.displayName = 'IconTextUnorderedList'
+
 export default IconTextUnorderedList

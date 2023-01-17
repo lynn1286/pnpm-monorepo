@@ -25,5 +25,6 @@ export const IconWallet = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconWallet.displayName = IconWalletProps
+IconWallet.displayName = 'IconWallet'
+
 export default IconWallet

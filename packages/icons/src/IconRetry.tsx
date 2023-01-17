@@ -25,5 +25,6 @@ export const IconRetry = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconRetry.displayName = IconRetryProps
+IconRetry.displayName = 'IconRetry'
+
 export default IconRetry

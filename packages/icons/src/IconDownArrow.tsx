@@ -23,5 +23,6 @@ export const IconDownArrow = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconDownArrow.displayName = IconDownArrowProps
+IconDownArrow.displayName = 'IconDownArrow'
+
 export default IconDownArrow

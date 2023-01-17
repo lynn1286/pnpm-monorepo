@@ -25,5 +25,6 @@ export const IconToolRotateLeft90 = React.forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-IconToolRotateLeft90.displayName = IconToolRotateLeft90Props
+IconToolRotateLeft90.displayName = 'IconToolRotateLeft90'
+
 export default IconToolRotateLeft90
