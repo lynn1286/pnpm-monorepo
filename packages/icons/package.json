@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "generate-icon": "generate-icon --file=9A191q4gkbPa10KJWfT5cY --className=mm-icon"
+    "generate-icon": "generate-icon "
   },
   "peerDependencies": {
     "react": "^16.x || ^17.x || ^18.x"
