@@ -7,10 +7,23 @@
     "preinstall": "node ./scripts/preinstall.js",
     "clean": "npm run clean-logs && npm run clean-modules",
     "clean-logs": "rimraf ./packages/*/npm-debug* && rimraf ./*-debug*",
-    "clean-modules": "rimraf ./packages/*/node_modules/ && rimraf ./node_modules/"
+    "clean-modules": "rimraf ./packages/*/node_modules/ && rimraf ./node_modules/",
+    "prepare": "husky install"
   },
   "author": "lynn",
   "dependencies": {
     "rimraf": "^4.0.4"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.4.2",
+    "@commitlint/config-conventional": "^17.4.2",
+    "@typescript-eslint/eslint-plugin": "^5.48.2",
+    "@typescript-eslint/parser": "^5.48.2",
+    "eslint": "8.32.0",
+    "eslint-config-next": "13.1.2",
+    "eslint-import-resolver-typescript": "^3.5.3",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.0",
+    "prettier": "^2.0.5"
   }
 }
