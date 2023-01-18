@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { IconProps } from './types';
+import type { IconProps } from './types';
 
 <% /* A. There are variants both for size and type */ %>
 <% if (icon.sizes.length > 1 && icon.types.length > 1) { %>
@@ -91,5 +91,7 @@ export const <%- iconToComponentName(icon) %> = React.forwardRef<SVGSVGElement, 
   }
 );
 <% } %>
+
+<%- iconToComponentName(icon) %>.displayName = "<%- iconToComponentName(icon) %>"
 
 export default <%- iconToComponentName(icon) %>;
