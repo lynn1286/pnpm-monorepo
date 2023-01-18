@@ -1,7 +1,6 @@
 {
   "name": "icons",
   "version": "0.1.0",
-  "private": false,
   "description": "React Icon Set",
   "main": "index.js",
   "module": "dist/icons.esm.js",
@@ -24,10 +23,10 @@
   ],
   "author": "lynn1286 <lynn1286@126.com>",
   "devDependencies": {
-    "generate-icon": "workspace:^0.1.9",
-    "tsdx": "0.14.0",
-    "typescript": "4.9.4",
-    "react": "18.2.0"
+    "generate-icon": "workspace:^0.1.11",
+    "react": "18.2.0",
+    "tsdx": "0.14.1",
+    "typescript": "4.9.4"
   },
   "peerDependencies": {
     "react": "^16.x || ^17.x || ^18.x"

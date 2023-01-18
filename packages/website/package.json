@@ -7,8 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "preinstall": "npx only-allow pnpm",
-    "generate-icon": "generate-icon"
+    "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {
     "@next/font": "13.1.2",

@@ -1,6 +1,6 @@
 import React from 'react'
 import type { Instance as InkInstance } from 'ink'
-import { render as inkRender, Box, Text, Static } from 'ink'
+import { render as inkRender, Box, Text } from 'ink'
 // import InkSpinner from 'ink-spinner' // 内部依赖有问题
 import type { IDiffSummary } from './types.js'
 
