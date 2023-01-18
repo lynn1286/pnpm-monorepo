@@ -1,20 +1,23 @@
 {
-  "include": ["src/**/*"],
   "compilerOptions": {
-    "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true,
+    "strictNullChecks": false,
     "moduleResolution": "node",
     "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "jsx": "preserve",
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
     "noImplicitAny": false,
+    "target": "es6",
     "skipLibCheck": true,
-    "module": "esnext",
-    "sourceMap": true,
-    "outDir": "dist",
-    "target": "es5",
+    "allowJs": true,
+    "importsNotUsedAsValues": "preserve",
+    "declaration": true,
+    "resolveJsonModule": true,
+    "declarationDir": "dist",
     "baseUrl": ".",
-    "jsx": "react",
-    "paths": {
-      "*": ["node_modules/*", "src/types/*"]
-    }
-  }
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
+  },
+  "include": ["src"],
+  "exclude": ["node_modules/**", "dist/**"]
 }
