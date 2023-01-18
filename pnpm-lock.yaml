@@ -102,6 +102,7 @@ importers:
       '@types/node': 18.11.18
       '@types/react': 18.0.26
       '@types/react-dom': 18.0.10
+      icons: workspace:^0.1.0
       next: 13.1.2
       react: 18.2.0
       react-dom: 18.2.0
@@ -111,6 +112,7 @@ importers:
       '@types/node': 18.11.18
       '@types/react': 18.0.26
       '@types/react-dom': 18.0.10
+      icons: link:../icons
       next: 13.1.2_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
