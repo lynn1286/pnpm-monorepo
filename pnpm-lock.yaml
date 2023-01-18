@@ -92,10 +92,9 @@ importers:
       react: 18.2.0
       tsdx: 0.14.0
       typescript: 4.9.4
-    dependencies:
-      react: 18.2.0
     devDependencies:
       generate-icon: link:../generate-icon
+      react: 18.2.0
       tsdx: 0.14.0
       typescript: 4.9.4
 
@@ -1841,6 +1840,7 @@ packages:
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
+    libc: [glibc]
     requiresBuild: true
     dev: false
     optional: true
@@ -1850,6 +1850,7 @@ packages:
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
+    libc: [musl]
     requiresBuild: true
     dev: false
     optional: true
@@ -1859,6 +1860,7 @@ packages:
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
+    libc: [glibc]
     requiresBuild: true
     dev: false
     optional: true
@@ -1868,6 +1870,7 @@ packages:
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
+    libc: [musl]
     requiresBuild: true
     dev: false
     optional: true
