@@ -1,1042 +1,178 @@
 [
-  { "ids": ["0:36"], "sizes": ["48"], "types": ["icons"], "svgName": "color", "jsxName": "Color" },
-  {
-    "ids": ["0:45"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "symbol",
-    "jsxName": "Symbol"
-  },
-  {
-    "ids": ["0:54", "133:8341"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "pattern",
-    "jsxName": "Pattern"
-  },
-  { "ids": ["0:111"], "sizes": ["48"], "types": ["icons"], "svgName": "down", "jsxName": "Down" },
-  {
-    "ids": ["0:114"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "down-bold",
-    "jsxName": "DownBold"
-  },
-  { "ids": ["0:117"], "sizes": ["48"], "types": ["icons"], "svgName": "up", "jsxName": "Up" },
-  {
-    "ids": ["0:120"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "up-bold",
-    "jsxName": "UpBold"
-  },
-  { "ids": ["0:123"], "sizes": ["48"], "types": ["icons"], "svgName": "left", "jsxName": "Left" },
-  {
-    "ids": ["0:126"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "left-bold",
-    "jsxName": "LeftBold"
-  },
-  {
-    "ids": ["0:129"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "right-bold",
-    "jsxName": "RightBold"
-  },
-  {
-    "ids": ["0:137"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "down-caret",
-    "jsxName": "DownCaret"
-  },
-  {
-    "ids": ["0:140"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "down-arrow",
-    "jsxName": "DownArrow"
-  },
-  {
-    "ids": ["0:143"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "up-arrow",
-    "jsxName": "UpArrow"
-  },
-  {
-    "ids": ["0:146"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "left-arrow",
-    "jsxName": "LeftArrow"
-  },
-  {
-    "ids": ["0:149"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "right-arrow",
-    "jsxName": "RightArrow"
-  },
-  {
-    "ids": ["0:152"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "up-caret",
-    "jsxName": "UpCaret"
-  },
-  {
-    "ids": ["0:155"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "left-caret",
-    "jsxName": "LeftCaret"
-  },
-  {
-    "ids": ["0:158"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "right-caret",
-    "jsxName": "RightCaret"
-  },
-  { "ids": ["0:161"], "sizes": ["48"], "types": ["icons"], "svgName": "right", "jsxName": "Right" },
-  {
-    "ids": ["0:164"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "sign-up",
-    "jsxName": "SignUp"
-  },
-  {
-    "ids": ["0:171"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "sign-in",
-    "jsxName": "SignIn"
-  },
-  {
-    "ids": ["0:178"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "search",
-    "jsxName": "Search"
-  },
-  {
-    "ids": ["0:183"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "eye-close",
-    "jsxName": "EyeClose"
-  },
-  { "ids": ["0:191"], "sizes": ["48"], "types": ["icons"], "svgName": "eye", "jsxName": "Eye" },
-  {
-    "ids": ["0:198"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "loading",
-    "jsxName": "Loading"
-  },
-  {
-    "ids": ["0:207"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "download",
-    "jsxName": "Download"
-  },
-  {
-    "ids": ["0:212"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "upload",
-    "jsxName": "Upload"
-  },
-  { "ids": ["0:217"], "sizes": ["48"], "types": ["icons"], "svgName": "pen", "jsxName": "Pen" },
-  {
-    "ids": ["0:223"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "more-vertical",
-    "jsxName": "MoreVertical"
-  },
-  { "ids": ["0:229"], "sizes": ["48"], "types": ["icons"], "svgName": "more", "jsxName": "More" },
-  {
-    "ids": ["0:235"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "delete",
-    "jsxName": "Delete"
-  },
-  { "ids": ["0:248"], "sizes": ["48"], "types": ["icons"], "svgName": "swap", "jsxName": "Swap" },
-  {
-    "ids": ["0:132"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "swap-bold",
-    "jsxName": "SwapBold"
-  },
-  {
-    "ids": ["0:253"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "drag-vertically",
-    "jsxName": "DragVertically"
-  },
-  {
-    "ids": ["0:262"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "drag-horizontally",
-    "jsxName": "DragHorizontally"
-  },
-  { "ids": ["0:501"], "sizes": ["48"], "types": ["icons"], "svgName": "check", "jsxName": "Check" },
-  { "ids": ["0:675"], "sizes": ["48"], "types": ["icons"], "svgName": "close", "jsxName": "Close" },
-  { "ids": ["0:201"], "sizes": ["48"], "types": ["icons"], "svgName": "plus", "jsxName": "Plus" },
-  { "ids": ["0:204"], "sizes": ["48"], "types": ["icons"], "svgName": "minus", "jsxName": "Minus" },
-  { "ids": ["0:302"], "sizes": ["48"], "types": ["icons"], "svgName": "store", "jsxName": "Store" },
-  {
-    "ids": ["0:311"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "store-import",
-    "jsxName": "StoreImport"
-  },
-  { "ids": ["0:326"], "sizes": ["48"], "types": ["icons"], "svgName": "image", "jsxName": "Image" },
-  {
-    "ids": ["0:319"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "image-add",
-    "jsxName": "ImageAdd"
-  },
-  {
-    "ids": ["0:333"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "heart-line",
-    "jsxName": "HeartLine"
-  },
-  { "ids": ["0:338"], "sizes": ["48"], "types": ["icons"], "svgName": "tag", "jsxName": "Tag" },
-  { "ids": ["0:344"], "sizes": ["48"], "types": ["icons"], "svgName": "maker", "jsxName": "Maker" },
-  {
-    "ids": ["0:353"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "settings",
-    "jsxName": "Settings"
-  },
-  {
-    "ids": ["0:360"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "notification-line",
-    "jsxName": "NotificationLine"
-  },
-  { "ids": ["0:366"], "sizes": ["48"], "types": ["icons"], "svgName": "home", "jsxName": "Home" },
-  { "ids": ["0:242"], "sizes": ["48"], "types": ["icons"], "svgName": "copy", "jsxName": "Copy" },
-  { "ids": ["0:380"], "sizes": ["48"], "types": ["icons"], "svgName": "earth", "jsxName": "Earth" },
-  {
-    "ids": ["0:271"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "share-open",
-    "jsxName": "ShareOpen"
-  },
-  {
-    "ids": ["0:276"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "checkbox",
-    "jsxName": "Checkbox"
-  },
-  { "ids": ["0:282"], "sizes": ["48"], "types": ["icons"], "svgName": "app", "jsxName": "App" },
-  { "ids": ["0:293"], "sizes": ["48"], "types": ["icons"], "svgName": "list", "jsxName": "List" },
-  {
-    "ids": ["0:422"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "location",
-    "jsxName": "Location"
-  },
-  {
-    "ids": ["0:429"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "billing",
-    "jsxName": "Billing"
-  },
-  {
-    "ids": ["0:445"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "language",
-    "jsxName": "Language"
-  },
-  {
-    "ids": ["0:435"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "article",
-    "jsxName": "Article"
-  },
-  { "ids": ["0:451"], "sizes": ["48"], "types": ["icons"], "svgName": "menu", "jsxName": "Menu" },
-  { "ids": ["0:496"], "sizes": ["48"], "types": ["icons"], "svgName": "quit", "jsxName": "Quit" },
-  {
-    "ids": ["0:595"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "dashboard",
-    "jsxName": "Dashboard"
-  },
-  {
-    "ids": ["0:604"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "currency",
-    "jsxName": "Currency"
-  },
-  { "ids": ["0:415"], "sizes": ["48"], "types": ["icons"], "svgName": "cart", "jsxName": "Cart" },
-  {
-    "ids": ["0:457"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "filters",
-    "jsxName": "Filters"
-  },
-  {
-    "ids": ["0:372"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "palette",
-    "jsxName": "Palette"
-  },
-  {
-    "ids": ["0:463"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "customer-service",
-    "jsxName": "CustomerService"
-  },
-  { "ids": ["0:388"], "sizes": ["48"], "types": ["icons"], "svgName": "skin", "jsxName": "Skin" },
-  {
-    "ids": ["0:393"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "skin-add",
-    "jsxName": "SkinAdd"
-  },
-  { "ids": ["0:398"], "sizes": ["48"], "types": ["icons"], "svgName": "nav", "jsxName": "Nav" },
-  { "ids": ["0:408"], "sizes": ["48"], "types": ["icons"], "svgName": "order", "jsxName": "Order" },
-  { "ids": ["0:488"], "sizes": ["48"], "types": ["icons"], "svgName": "drag", "jsxName": "Drag" },
-  { "ids": ["0:469"], "sizes": ["48"], "types": ["icons"], "svgName": "add", "jsxName": "Add" },
-  {
-    "ids": ["0:482"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "safety",
-    "jsxName": "Safety"
-  },
-  { "ids": ["0:474"], "sizes": ["48"], "types": ["icons"], "svgName": "print", "jsxName": "Print" },
-  {
-    "ids": ["145:8997"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "tool-rotate",
-    "jsxName": "ToolRotate"
-  },
-  {
-    "ids": ["175:8161"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "tool-rotate-left-90",
-    "jsxName": "ToolRotateLeft90"
-  },
-  {
-    "ids": ["175:8162"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "tool-rotate-right-90",
-    "jsxName": "ToolRotateRight90"
-  },
-  {
-    "ids": ["162:8287"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "tool-locked",
-    "jsxName": "ToolLocked"
-  },
-  {
-    "ids": ["162:8288"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "tool-unlocked",
-    "jsxName": "ToolUnlocked"
-  },
-  {
-    "ids": ["305:8347"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "progress-0",
-    "jsxName": "Progress0"
-  },
-  {
-    "ids": ["305:8357"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "retry",
-    "jsxName": "Retry"
-  },
-  {
-    "ids": ["333:8463"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "as-public",
-    "jsxName": "AsPublic"
-  },
-  {
-    "ids": ["308:8383"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "step-back-line",
-    "jsxName": "StepBackLine"
-  },
-  {
-    "ids": ["308:8384"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "step-next-line",
-    "jsxName": "StepNextLine"
-  },
-  {
-    "ids": ["308:8385"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "zoom-in",
-    "jsxName": "ZoomIn"
-  },
-  {
-    "ids": ["308:8386"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "zoom-out",
-    "jsxName": "ZoomOut"
-  },
-  {
-    "ids": ["308:8444"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "flip-horizontally",
-    "jsxName": "FlipHorizontally"
-  },
-  {
-    "ids": ["308:8442"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "flip-vertically",
-    "jsxName": "FlipVertically"
-  },
-  {
-    "ids": ["308:8443"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "align-left",
-    "jsxName": "AlignLeft"
-  },
-  {
-    "ids": ["308:8502"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "align-center-horizontally",
-    "jsxName": "AlignCenterHorizontally"
-  },
-  {
-    "ids": ["308:8501"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "align-right",
-    "jsxName": "AlignRight"
-  },
-  {
-    "ids": ["308:8500"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "align-top",
-    "jsxName": "AlignTop"
-  },
-  {
-    "ids": ["308:8499"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "align-center-vertically",
-    "jsxName": "AlignCenterVertically"
-  },
-  {
-    "ids": ["308:8498"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "align-bottom",
-    "jsxName": "AlignBottom"
-  },
-  {
-    "ids": ["308:8522"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "tailoring",
-    "jsxName": "Tailoring"
-  },
-  {
-    "ids": ["312:8702"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "paste",
-    "jsxName": "Paste"
-  },
-  {
-    "ids": ["312:8699"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "send-bckward",
-    "jsxName": "SendBckward"
-  },
-  {
-    "ids": ["312:8698"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "bring-forward",
-    "jsxName": "BringForward"
-  },
-  {
-    "ids": ["317:8936"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "send-to-back",
-    "jsxName": "SendToBack"
-  },
-  {
-    "ids": ["317:8937"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "bring-to-front",
-    "jsxName": "BringToFront"
-  },
-  {
-    "ids": ["321:8532"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "hand",
-    "jsxName": "Hand"
-  },
-  {
-    "ids": ["323:8375"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "file",
-    "jsxName": "File"
-  },
-  {
-    "ids": ["352:8713"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "clear",
-    "jsxName": "Clear"
-  },
-  {
-    "ids": ["355:8737"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "image-error",
-    "jsxName": "ImageError"
-  },
-  {
-    "ids": ["594:8463"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "ai-recognition",
-    "jsxName": "AiRecognition"
-  },
-  {
-    "ids": ["855:8719"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "corner-left-up",
-    "jsxName": "CornerLeftUp"
-  },
-  {
-    "ids": ["1184:9148"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "computer",
-    "jsxName": "Computer"
-  },
-  {
-    "ids": ["1184:9147"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "mobile",
-    "jsxName": "Mobile"
-  },
-  {
-    "ids": ["1296:9176"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "read",
-    "jsxName": "Read"
-  },
-  {
-    "ids": ["1409:9431"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "hourglass",
-    "jsxName": "Hourglass"
-  },
-  {
-    "ids": ["1492:9722"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "verification",
-    "jsxName": "Verification"
-  },
-  {
-    "ids": ["1534:9676"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "puzzle",
-    "jsxName": "Puzzle"
-  },
-  {
-    "ids": ["1564:9680"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "feedback",
-    "jsxName": "Feedback"
-  },
-  {
-    "ids": ["1783:9705"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "my-product",
-    "jsxName": "MyProduct"
-  },
-  {
-    "ids": ["0:569"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "plus-circle-line",
-    "jsxName": "PlusCircleLine"
-  },
-  {
-    "ids": ["0:589"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "check-circle-line",
-    "jsxName": "CheckCircleLine"
-  },
-  {
-    "ids": ["0:583"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "error-circle-line",
-    "jsxName": "ErrorCircleLine"
-  },
-  {
-    "ids": ["0:575"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "exclamation-circle-line",
-    "jsxName": "ExclamationCircleLine"
-  },
-  {
-    "ids": ["0:668"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "question-circle-line",
-    "jsxName": "QuestionCircleLine"
-  },
-  {
-    "ids": ["0:610"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "text-bold",
-    "jsxName": "TextBold"
-  },
-  {
-    "ids": ["0:616"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "text-italic",
-    "jsxName": "TextItalic"
-  },
-  {
-    "ids": ["0:619"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "text-underline",
-    "jsxName": "TextUnderline"
-  },
-  {
-    "ids": ["0:624"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "text-unordered-list",
-    "jsxName": "TextUnorderedList"
-  },
-  {
-    "ids": ["0:633"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "text-ordered-list",
-    "jsxName": "TextOrderedList"
-  },
-  {
-    "ids": ["0:642"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "text-align-left",
-    "jsxName": "TextAlignLeft"
-  },
-  {
-    "ids": ["0:649"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "text-align-center",
-    "jsxName": "TextAlignCenter"
-  },
-  {
-    "ids": ["0:656"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "text-align-right",
-    "jsxName": "TextAlignRight"
-  },
-  {
-    "ids": ["0:663"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "expand-window",
-    "jsxName": "ExpandWindow"
-  },
-  {
-    "ids": ["0:29"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "menu-fold",
-    "jsxName": "MenuFold"
-  },
-  {
-    "ids": ["0:22"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "menu-un-fold",
-    "jsxName": "MenuUnFold"
-  },
-  {
-    "ids": ["352:8645"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "attribute-x",
-    "jsxName": "AttributeX"
-  },
-  {
-    "ids": ["355:8762"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "attribute-a",
-    "jsxName": "AttributeA"
-  },
-  {
-    "ids": ["352:8646"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "attribute-h",
-    "jsxName": "AttributeH"
-  },
-  {
-    "ids": ["352:8647"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "attribute-y",
-    "jsxName": "AttributeY"
-  },
-  {
-    "ids": ["352:8648"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "attribute-w",
-    "jsxName": "AttributeW"
-  },
-  {
-    "ids": ["352:8649"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "attribute-deg",
-    "jsxName": "AttributeDeg"
-  },
-  {
-    "ids": ["377:8480"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "attribute-opacity",
-    "jsxName": "AttributeOpacity"
-  },
-  {
-    "ids": ["845:8659"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "pattern-1",
-    "jsxName": "Pattern1"
-  },
-  {
-    "ids": ["845:8660"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "pattern-2",
-    "jsxName": "Pattern2"
-  },
-  {
-    "ids": ["845:8661"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "pattern-3",
-    "jsxName": "Pattern3"
-  },
-  {
-    "ids": ["845:8662"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "pattern-4",
-    "jsxName": "Pattern4"
-  },
-  {
-    "ids": ["845:8663"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "pattern-5",
-    "jsxName": "Pattern5"
-  },
-  {
-    "ids": ["845:8664"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "pattern-6",
-    "jsxName": "Pattern6"
-  },
-  {
-    "ids": ["0:504"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "close-circle-fill",
-    "jsxName": "CloseCircleFill"
-  },
-  {
-    "ids": ["0:509"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "check-circle-fill",
-    "jsxName": "CheckCircleFill"
-  },
-  {
-    "ids": ["0:514"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "heart-fill",
-    "jsxName": "HeartFill"
-  },
-  {
-    "ids": ["0:517"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "exclamation-circle-fill",
-    "jsxName": "ExclamationCircleFill"
-  },
-  {
-    "ids": ["0:523"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "info-circle-fill",
-    "jsxName": "InfoCircleFill"
-  },
-  {
-    "ids": ["0:529"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "question-circle-fill",
-    "jsxName": "QuestionCircleFill"
-  },
-  {
-    "ids": ["0:535"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "subscription",
-    "jsxName": "Subscription"
-  },
-  {
-    "ids": ["0:540"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "products",
-    "jsxName": "Products"
-  },
-  {
-    "ids": ["0:563"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "wallet",
-    "jsxName": "Wallet"
-  },
-  {
-    "ids": ["0:560"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "filter",
-    "jsxName": "Filter"
-  },
-  { "ids": ["0:552"], "sizes": ["48"], "types": ["icons"], "svgName": "empty", "jsxName": "Empty" },
-  {
-    "ids": ["319:8448"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "step-back-fill",
-    "jsxName": "StepBackFill"
-  },
-  {
-    "ids": ["319:8449"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "step-next-fill",
-    "jsxName": "StepNextFill"
-  },
-  {
-    "ids": ["324:9011"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "spotify",
-    "jsxName": "Spotify"
-  },
-  {
-    "ids": ["654:8548"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "retry-circle",
-    "jsxName": "RetryCircle"
-  },
-  {
-    "ids": ["1286:9172"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "notification-fill",
-    "jsxName": "NotificationFill"
-  },
-  {
-    "ids": ["1502:9788"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "time-circle-fill",
-    "jsxName": "TimeCircleFill"
-  },
-  {
-    "ids": ["1532:9722"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "refunded",
-    "jsxName": "Refunded"
-  },
-  {
-    "ids": ["1544:9685"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "thunbs-up",
-    "jsxName": "ThunbsUp"
-  },
-  {
-    "ids": ["1544:9686"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "thunbs-down",
-    "jsxName": "ThunbsDown"
-  },
-  {
-    "ids": ["133:8372"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "mirror-horizontal",
-    "jsxName": "MirrorHorizontal"
-  },
-  {
-    "ids": ["133:8375"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "mirror-vertical",
-    "jsxName": "MirrorVertical"
-  },
-  {
-    "ids": ["133:8367"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "stock-bicolor",
-    "jsxName": "StockBicolor"
-  },
-  {
-    "ids": ["133:8378"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "upload-text",
-    "jsxName": "UploadText"
-  },
-  {
-    "ids": ["133:8357"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "device-desktop-bicolor",
-    "jsxName": "DeviceDesktopBicolor"
-  },
-  {
-    "ids": ["1075:9104"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "more-bicolor",
-    "jsxName": "MoreBicolor"
-  },
-  {
-    "ids": ["0:546"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "loading-m",
-    "jsxName": "LoadingM"
-  },
-  {
-    "ids": ["130:8341"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "instagram",
-    "jsxName": "Instagram"
-  },
-  {
-    "ids": ["130:8368"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "facebook",
-    "jsxName": "Facebook"
-  },
-  {
-    "ids": ["130:8386"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "googledrive",
-    "jsxName": "Googledrive"
-  },
-  {
-    "ids": ["131:8420"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "canva",
-    "jsxName": "Canva"
-  },
-  {
-    "ids": ["0:678"],
-    "sizes": ["48"],
-    "types": ["icons"],
-    "svgName": "google",
-    "jsxName": "Google"
-  }
+  { "componentName": "IconColor" },
+  { "componentName": "IconSymbol" },
+  { "componentName": "IconPattern" },
+  { "componentName": "IconDown" },
+  { "componentName": "IconDownBold" },
+  { "componentName": "IconUp" },
+  { "componentName": "IconUpBold" },
+  { "componentName": "IconLeft" },
+  { "componentName": "IconLeftBold" },
+  { "componentName": "IconRightBold" },
+  { "componentName": "IconDownCaret" },
+  { "componentName": "IconDownArrow" },
+  { "componentName": "IconUpArrow" },
+  { "componentName": "IconLeftArrow" },
+  { "componentName": "IconRightArrow" },
+  { "componentName": "IconUpCaret" },
+  { "componentName": "IconLeftCaret" },
+  { "componentName": "IconRightCaret" },
+  { "componentName": "IconRight" },
+  { "componentName": "IconSignUp" },
+  { "componentName": "IconSignIn" },
+  { "componentName": "IconSearch" },
+  { "componentName": "IconEyeClose" },
+  { "componentName": "IconEye" },
+  { "componentName": "IconLoading" },
+  { "componentName": "IconDownload" },
+  { "componentName": "IconUpload" },
+  { "componentName": "IconPen" },
+  { "componentName": "IconMoreVertical" },
+  { "componentName": "IconMore" },
+  { "componentName": "IconDelete" },
+  { "componentName": "IconSwap" },
+  { "componentName": "IconSwapBold" },
+  { "componentName": "IconDragVertically" },
+  { "componentName": "IconDragHorizontally" },
+  { "componentName": "IconCheck" },
+  { "componentName": "IconClose" },
+  { "componentName": "IconPlus" },
+  { "componentName": "IconMinus" },
+  { "componentName": "IconStore" },
+  { "componentName": "IconStoreImport" },
+  { "componentName": "IconImage" },
+  { "componentName": "IconImageAdd" },
+  { "componentName": "IconHeartLine" },
+  { "componentName": "IconTag" },
+  { "componentName": "IconMaker" },
+  { "componentName": "IconSettings" },
+  { "componentName": "IconNotificationLine" },
+  { "componentName": "IconHome" },
+  { "componentName": "IconCopy" },
+  { "componentName": "IconEarth" },
+  { "componentName": "IconShareOpen" },
+  { "componentName": "IconCheckbox" },
+  { "componentName": "IconApp" },
+  { "componentName": "IconList" },
+  { "componentName": "IconLocation" },
+  { "componentName": "IconBilling" },
+  { "componentName": "IconLanguage" },
+  { "componentName": "IconArticle" },
+  { "componentName": "IconMenu" },
+  { "componentName": "IconQuit" },
+  { "componentName": "IconDashboard" },
+  { "componentName": "IconCurrency" },
+  { "componentName": "IconCart" },
+  { "componentName": "IconFilters" },
+  { "componentName": "IconPalette" },
+  { "componentName": "IconCustomerService" },
+  { "componentName": "IconSkin" },
+  { "componentName": "IconSkinAdd" },
+  { "componentName": "IconNav" },
+  { "componentName": "IconOrder" },
+  { "componentName": "IconDrag" },
+  { "componentName": "IconAdd" },
+  { "componentName": "IconSafety" },
+  { "componentName": "IconPrint" },
+  { "componentName": "IconToolRotate" },
+  { "componentName": "IconToolRotateLeft90" },
+  { "componentName": "IconToolRotateRight90" },
+  { "componentName": "IconToolLocked" },
+  { "componentName": "IconToolUnlocked" },
+  { "componentName": "IconProgress0" },
+  { "componentName": "IconRetry" },
+  { "componentName": "IconAsPublic" },
+  { "componentName": "IconStepBackLine" },
+  { "componentName": "IconStepNextLine" },
+  { "componentName": "IconZoomIn" },
+  { "componentName": "IconZoomOut" },
+  { "componentName": "IconFlipHorizontally" },
+  { "componentName": "IconFlipVertically" },
+  { "componentName": "IconAlignLeft" },
+  { "componentName": "IconAlignCenterHorizontally" },
+  { "componentName": "IconAlignRight" },
+  { "componentName": "IconAlignTop" },
+  { "componentName": "IconAlignCenterVertically" },
+  { "componentName": "IconAlignBottom" },
+  { "componentName": "IconTailoring" },
+  { "componentName": "IconPaste" },
+  { "componentName": "IconSendBckward" },
+  { "componentName": "IconBringForward" },
+  { "componentName": "IconSendToBack" },
+  { "componentName": "IconBringToFront" },
+  { "componentName": "IconHand" },
+  { "componentName": "IconFile" },
+  { "componentName": "IconClear" },
+  { "componentName": "IconImageError" },
+  { "componentName": "IconAiRecognition" },
+  { "componentName": "IconCornerLeftUp" },
+  { "componentName": "IconComputer" },
+  { "componentName": "IconMobile" },
+  { "componentName": "IconRead" },
+  { "componentName": "IconHourglass" },
+  { "componentName": "IconVerification" },
+  { "componentName": "IconPuzzle" },
+  { "componentName": "IconFeedback" },
+  { "componentName": "IconMyProduct" },
+  { "componentName": "IconPlusCircleLine" },
+  { "componentName": "IconCheckCircleLine" },
+  { "componentName": "IconErrorCircleLine" },
+  { "componentName": "IconExclamationCircleLine" },
+  { "componentName": "IconQuestionCircleLine" },
+  { "componentName": "IconTextBold" },
+  { "componentName": "IconTextItalic" },
+  { "componentName": "IconTextUnderline" },
+  { "componentName": "IconTextUnorderedList" },
+  { "componentName": "IconTextOrderedList" },
+  { "componentName": "IconTextAlignLeft" },
+  { "componentName": "IconTextAlignCenter" },
+  { "componentName": "IconTextAlignRight" },
+  { "componentName": "IconExpandWindow" },
+  { "componentName": "IconMenuFold" },
+  { "componentName": "IconMenuUnFold" },
+  { "componentName": "IconAttributeX" },
+  { "componentName": "IconAttributeA" },
+  { "componentName": "IconAttributeH" },
+  { "componentName": "IconAttributeY" },
+  { "componentName": "IconAttributeW" },
+  { "componentName": "IconAttributeDeg" },
+  { "componentName": "IconAttributeOpacity" },
+  { "componentName": "IconPattern1" },
+  { "componentName": "IconPattern2" },
+  { "componentName": "IconPattern3" },
+  { "componentName": "IconPattern4" },
+  { "componentName": "IconPattern5" },
+  { "componentName": "IconPattern6" },
+  { "componentName": "IconCloseCircleFill" },
+  { "componentName": "IconCheckCircleFill" },
+  { "componentName": "IconHeartFill" },
+  { "componentName": "IconExclamationCircleFill" },
+  { "componentName": "IconInfoCircleFill" },
+  { "componentName": "IconQuestionCircleFill" },
+  { "componentName": "IconSubscription" },
+  { "componentName": "IconProducts" },
+  { "componentName": "IconWallet" },
+  { "componentName": "IconFilter" },
+  { "componentName": "IconEmpty" },
+  { "componentName": "IconStepBackFill" },
+  { "componentName": "IconStepNextFill" },
+  { "componentName": "IconSpotify" },
+  { "componentName": "IconRetryCircle" },
+  { "componentName": "IconNotificationFill" },
+  { "componentName": "IconTimeCircleFill" },
+  { "componentName": "IconRefunded" },
+  { "componentName": "IconThunbsUp" },
+  { "componentName": "IconThunbsDown" },
+  { "componentName": "IconMirrorHorizontal" },
+  { "componentName": "IconMirrorVertical" },
+  { "componentName": "IconStockBicolor" },
+  { "componentName": "IconUploadText" },
+  { "componentName": "IconDeviceDesktopBicolor" },
+  { "componentName": "IconMoreBicolor" },
+  { "componentName": "IconLoadingM" },
+  { "componentName": "IconInstagram" },
+  { "componentName": "IconFacebook" },
+  { "componentName": "IconGoogledrive" },
+  { "componentName": "IconCanva" },
+  { "componentName": "IconGoogle" }
 ]

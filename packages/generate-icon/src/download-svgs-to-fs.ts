@@ -162,7 +162,7 @@ export async function generateReactComponents(icons: IIcons) {
   }
 
   // 生成 json 数据
-  const jsonData = Object.values<ITemplateJsonIcon>(
+  const componentJsonData = Object.values<ITemplateJsonIcon>(
     Object.keys(icons).reduce((component: { [name: string]: ITemplateJsonIcon }, iconId) => {
       const icon = component[icons[iconId].svgName] || {
         componentName: `Icon${icons[iconId].jsxName}`,
@@ -174,11 +174,11 @@ export async function generateReactComponents(icons: IIcons) {
     }, {})
   )
 
-  const componentNames = prettier.format(JSON.stringify(jsonData), {
+  const componentNames = prettier.format(JSON.stringify(componentJsonData), {
     ...prettierOptions,
     parser: 'json',
   })
-  const componentJsonFilePath = path.resolve(currentTempDir, 'src/', 'icons.json')
+  const componentJsonFilePath = path.resolve(currentTempDir, 'src/', 'index.json')
   await outputFile(componentJsonFilePath, componentNames)
   currentListOfAddedFiles.push(componentJsonFilePath)
 
