@@ -3,3 +3,4 @@ node_modules
 *.ejs
 packages/generate-icon/lib
 packages/website/public
+packages/icons/dist
