@@ -48,6 +48,10 @@ export interface ITemplateIcon {
   svgName: string
 }
 
+export interface ITemplateJsonIcon {
+  componentName: string
+}
+
 export interface IIconsSvgUrls {
   readonly [iconId: string]: string
 }

@@ -1,5 +1,11 @@
 import { transformers } from './transformers.js'
-import type { IIconManifest, IIcons, IIconsSvgUrls, ITemplateIcon } from './types.js'
+import type {
+  IIconManifest,
+  IIcons,
+  IIconsSvgUrls,
+  ITemplateIcon,
+  ITemplateJsonIcon,
+} from './types.js'
 import * as path from 'path'
 import { temporaryDirectory } from 'tempy'
 import { labelling } from './labelling.js'
@@ -133,10 +139,7 @@ export async function generateReactComponents(icons: IIcons) {
 
   const prettierOptions = prettier.resolveConfig.sync(process.cwd())
 
-  console.log('mademine  : generateReactComponents -> ', iconsWithVariants)
-
-  return
-  // 根据模版生成 React 组件
+  // 生成 React 组件
   for (const i in iconsWithVariants) {
     const icon = iconsWithVariants[i]
     const iconSourceRaw = await ejs.render(templates.icon, {
@@ -147,14 +150,37 @@ export async function generateReactComponents(icons: IIcons) {
       ...prettierOptions,
       parser: 'typescript',
     })
+
     const iconComponentFilePath = path.resolve(
       currentTempDir,
       'src/',
       templateHelpers.iconToReactFileName(icon)
     )
     await outputFile(iconComponentFilePath, iconSource)
+
     currentListOfAddedFiles.push(iconComponentFilePath)
   }
+
+  // 生成 json 数据
+  const jsonData = Object.values<ITemplateJsonIcon>(
+    Object.keys(icons).reduce((component: { [name: string]: ITemplateJsonIcon }, iconId) => {
+      const icon = component[icons[iconId].svgName] || {
+        componentName: `Icon${icons[iconId].jsxName}`,
+      }
+
+      component[icons[iconId].svgName] = icon
+
+      return component
+    }, {})
+  )
+
+  const componentNames = prettier.format(JSON.stringify(jsonData), {
+    ...prettierOptions,
+    parser: 'json',
+  })
+  const componentJsonFilePath = path.resolve(currentTempDir, 'src/', 'icons.json')
+  await outputFile(componentJsonFilePath, componentNames)
+  currentListOfAddedFiles.push(componentJsonFilePath)
 
   // 生成入口文件
   const entrySourceRaw = await ejs.render(templates.entry, {
