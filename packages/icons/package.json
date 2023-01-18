@@ -32,7 +32,7 @@
     "react": "^16.x || ^17.x || ^18.x"
   },
   "publishConfig": {
-    "registry": "http://npm.maiyuan.online/repository/mnpm-npm"
+    "access": "public"
   },
   "dependencies": {
     "react": "18.2.0"
