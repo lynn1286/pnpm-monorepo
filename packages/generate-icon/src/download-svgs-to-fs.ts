@@ -174,7 +174,7 @@ export async function generateReactComponents(icons: IIcons) {
     }, {})
   )
 
-  const componentNames = prettier.format(JSON.stringify(componentJsonData), {
+  const componentNames = prettier.format(JSON.stringify({ components: componentJsonData }), {
     ...prettierOptions,
     parser: 'json',
   })
