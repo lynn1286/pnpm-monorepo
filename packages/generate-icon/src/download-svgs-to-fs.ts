@@ -133,6 +133,9 @@ export async function generateReactComponents(icons: IIcons) {
 
   const prettierOptions = prettier.resolveConfig.sync(process.cwd())
 
+  console.log('mademine  : generateReactComponents -> ', iconsWithVariants)
+
+  return
   // 根据模版生成 React 组件
   for (const i in iconsWithVariants) {
     const icon = iconsWithVariants[i]
