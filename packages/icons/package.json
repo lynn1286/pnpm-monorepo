@@ -6,7 +6,8 @@
   "types": "dist/types/index.d.ts",
   "files": [
     "dist/",
-    "manifest.json"
+    "manifest.json",
+    "src/index.json"
   ],
   "scripts": {
     "preinstall": "npx only-allow pnpm",
